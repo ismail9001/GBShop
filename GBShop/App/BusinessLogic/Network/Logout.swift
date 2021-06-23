@@ -1,13 +1,13 @@
 //
-//  Auth.swift
+//  Exit.swift
 //  GBShop
 //
-//  Created by macbook on 22.06.2021.
+//  Created by macbook on 23.06.2021.
 //
 
 import Alamofire
 
-class Auth: AbstractRequestFactory {
+class Exit: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -23,24 +23,22 @@ class Auth: AbstractRequestFactory {
         }
 }
 
-extension Auth: AuthRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
-        let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
+extension Exit: LogoutRequestFactory {
+    func logout(userId: Int, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
+        let requestModel = Logout(baseUrl: baseUrl, userId: userId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
-extension Auth {
-    struct Login: RequestRouter {
+extension Exit {
+    struct Logout: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
-        let path: String = "login.json"
-        let login: String
-        let password: String
+        let path: String = "logout.json"
+        let userId: Int
         var parameters: Parameters? {
             return [
-                "username": login,
-                "password": password
+                "id_user": userId
             ]
         }
     }

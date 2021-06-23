@@ -28,6 +28,9 @@
 		FAE5ACB726827CB700F070DC /* CustomDecodableSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACB626827CB600F070DC /* CustomDecodableSerializer.swift */; };
 		FAE5ACBC26827D1800F070DC /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACBB26827D1800F070DC /* DataRequest.swift */; };
 		FAE5ACC226827D6200F070DC /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACC126827D6200F070DC /* RequestRouter.swift */; };
+		FAE5ACD42683B07900F070DC /* LogoutRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACD32683B07900F070DC /* LogoutRequestFactory.swift */; };
+		FAE5ACD92683B0FC00F070DC /* LogoutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACD82683B0FC00F070DC /* LogoutResult.swift */; };
+		FAE5ACDE2683B13A00F070DC /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACDD2683B13A00F070DC /* Logout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		FAE5ACB626827CB600F070DC /* CustomDecodableSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDecodableSerializer.swift; sourceTree = "<group>"; };
 		FAE5ACBB26827D1800F070DC /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		FAE5ACC126827D6200F070DC /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		FAE5ACD32683B07900F070DC /* LogoutRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequestFactory.swift; sourceTree = "<group>"; };
+		FAE5ACD82683B0FC00F070DC /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResult.swift; sourceTree = "<group>"; };
+		FAE5ACDD2683B13A00F070DC /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +219,7 @@
 			children = (
 				FAE5AC80268278DB00F070DC /* LoginResult.swift */,
 				FAE5AC86268278F600F070DC /* User.swift */,
+				FAE5ACD82683B0FC00F070DC /* LogoutResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -261,7 +268,9 @@
 			children = (
 				FAE5AC8F2682794400F070DC /* AuthRequestFactory.swift */,
 				FAE5ACA126827A1C00F070DC /* Auth.swift */,
+				FAE5ACD32683B07900F070DC /* LogoutRequestFactory.swift */,
 				FAE5ACA626827AC200F070DC /* RequestFactory.swift */,
+				FAE5ACDD2683B13A00F070DC /* Logout.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -517,7 +526,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE5ACAD26827BF900F070DC /* AbstractErrorParser.swift in Sources */,
+				FAE5ACDE2683B13A00F070DC /* Logout.swift in Sources */,
 				FAE5ACA726827AC200F070DC /* RequestFactory.swift in Sources */,
+				FAE5ACD42683B07900F070DC /* LogoutRequestFactory.swift in Sources */,
+				FAE5ACD92683B0FC00F070DC /* LogoutResult.swift in Sources */,
 				FAE5AC81268278DB00F070DC /* LoginResult.swift in Sources */,
 				FAE5ACBC26827D1800F070DC /* DataRequest.swift in Sources */,
 				FAE5AC41267F885F00F070DC /* ViewController.swift in Sources */,
