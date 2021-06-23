@@ -34,6 +34,9 @@
 		FAE5ACE32683B5FB00F070DC /* RegistrationRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACE22683B5FB00F070DC /* RegistrationRequestFactory.swift */; };
 		FAE5ACE82683B6A200F070DC /* RegistrationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACE72683B6A200F070DC /* RegistrationResult.swift */; };
 		FAE5ACED2683B74A00F070DC /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACEC2683B74A00F070DC /* Registration.swift */; };
+		FAE5ACFA2683BEF800F070DC /* UserUpdateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACF92683BEF800F070DC /* UserUpdateResult.swift */; };
+		FAE5ACFF2683BF2A00F070DC /* UserUpdateRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACFE2683BF2A00F070DC /* UserUpdateRequestFactory.swift */; };
+		FAE5AD042683BF5E00F070DC /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD032683BF5E00F070DC /* UserUpdate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		FAE5ACE22683B5FB00F070DC /* RegistrationRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequestFactory.swift; sourceTree = "<group>"; };
 		FAE5ACE72683B6A200F070DC /* RegistrationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationResult.swift; sourceTree = "<group>"; };
 		FAE5ACEC2683B74A00F070DC /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		FAE5ACF92683BEF800F070DC /* UserUpdateResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdateResult.swift; sourceTree = "<group>"; };
+		FAE5ACFE2683BF2A00F070DC /* UserUpdateRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdateRequestFactory.swift; sourceTree = "<group>"; };
+		FAE5AD032683BF5E00F070DC /* UserUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +233,7 @@
 				FAE5AC86268278F600F070DC /* User.swift */,
 				FAE5ACD82683B0FC00F070DC /* LogoutResult.swift */,
 				FAE5ACE72683B6A200F070DC /* RegistrationResult.swift */,
+				FAE5ACF92683BEF800F070DC /* UserUpdateResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -273,13 +280,9 @@
 		FAE5AC8E2682792D00F070DC /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FAE5AC8F2682794400F070DC /* AuthRequestFactory.swift */,
-				FAE5ACA126827A1C00F070DC /* Auth.swift */,
-				FAE5ACD32683B07900F070DC /* LogoutRequestFactory.swift */,
+				FAE5AD092683C2E700F070DC /* User */,
+				FAE5AD082683C2CA00F070DC /* Auth */,
 				FAE5ACA626827AC200F070DC /* RequestFactory.swift */,
-				FAE5ACDD2683B13A00F070DC /* Logout.swift */,
-				FAE5ACE22683B5FB00F070DC /* RegistrationRequestFactory.swift */,
-				FAE5ACEC2683B74A00F070DC /* Registration.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -294,6 +297,28 @@
 				FAE5ACC126827D6200F070DC /* RequestRouter.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		FAE5AD082683C2CA00F070DC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5AC8F2682794400F070DC /* AuthRequestFactory.swift */,
+				FAE5ACA126827A1C00F070DC /* Auth.swift */,
+				FAE5ACD32683B07900F070DC /* LogoutRequestFactory.swift */,
+				FAE5ACDD2683B13A00F070DC /* Logout.swift */,
+				FAE5ACE22683B5FB00F070DC /* RegistrationRequestFactory.swift */,
+				FAE5ACEC2683B74A00F070DC /* Registration.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FAE5AD092683C2E700F070DC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5ACFE2683BF2A00F070DC /* UserUpdateRequestFactory.swift */,
+				FAE5AD032683BF5E00F070DC /* UserUpdate.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE5ACAD26827BF900F070DC /* AbstractErrorParser.swift in Sources */,
+				FAE5AD042683BF5E00F070DC /* UserUpdate.swift in Sources */,
 				FAE5ACDE2683B13A00F070DC /* Logout.swift in Sources */,
 				FAE5ACA726827AC200F070DC /* RequestFactory.swift in Sources */,
 				FAE5ACE32683B5FB00F070DC /* RegistrationRequestFactory.swift in Sources */,
@@ -552,6 +578,8 @@
 				FAE5AC87268278F600F070DC /* User.swift in Sources */,
 				FAE5ACE82683B6A200F070DC /* RegistrationResult.swift in Sources */,
 				FAE5AC3F267F885F00F070DC /* SceneDelegate.swift in Sources */,
+				FAE5ACFA2683BEF800F070DC /* UserUpdateResult.swift in Sources */,
+				FAE5ACFF2683BF2A00F070DC /* UserUpdateRequestFactory.swift in Sources */,
 				FAE5ACC226827D6200F070DC /* RequestRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
