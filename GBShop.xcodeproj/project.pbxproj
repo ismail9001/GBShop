@@ -31,6 +31,9 @@
 		FAE5ACD42683B07900F070DC /* LogoutRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACD32683B07900F070DC /* LogoutRequestFactory.swift */; };
 		FAE5ACD92683B0FC00F070DC /* LogoutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACD82683B0FC00F070DC /* LogoutResult.swift */; };
 		FAE5ACDE2683B13A00F070DC /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACDD2683B13A00F070DC /* Logout.swift */; };
+		FAE5ACE32683B5FB00F070DC /* RegistrationRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACE22683B5FB00F070DC /* RegistrationRequestFactory.swift */; };
+		FAE5ACE82683B6A200F070DC /* RegistrationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACE72683B6A200F070DC /* RegistrationResult.swift */; };
+		FAE5ACED2683B74A00F070DC /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACEC2683B74A00F070DC /* Registration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		FAE5ACD32683B07900F070DC /* LogoutRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequestFactory.swift; sourceTree = "<group>"; };
 		FAE5ACD82683B0FC00F070DC /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResult.swift; sourceTree = "<group>"; };
 		FAE5ACDD2683B13A00F070DC /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
+		FAE5ACE22683B5FB00F070DC /* RegistrationRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequestFactory.swift; sourceTree = "<group>"; };
+		FAE5ACE72683B6A200F070DC /* RegistrationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationResult.swift; sourceTree = "<group>"; };
+		FAE5ACEC2683B74A00F070DC /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,7 @@
 				FAE5AC80268278DB00F070DC /* LoginResult.swift */,
 				FAE5AC86268278F600F070DC /* User.swift */,
 				FAE5ACD82683B0FC00F070DC /* LogoutResult.swift */,
+				FAE5ACE72683B6A200F070DC /* RegistrationResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -271,6 +278,8 @@
 				FAE5ACD32683B07900F070DC /* LogoutRequestFactory.swift */,
 				FAE5ACA626827AC200F070DC /* RequestFactory.swift */,
 				FAE5ACDD2683B13A00F070DC /* Logout.swift */,
+				FAE5ACE22683B5FB00F070DC /* RegistrationRequestFactory.swift */,
+				FAE5ACEC2683B74A00F070DC /* Registration.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -528,6 +537,8 @@
 				FAE5ACAD26827BF900F070DC /* AbstractErrorParser.swift in Sources */,
 				FAE5ACDE2683B13A00F070DC /* Logout.swift in Sources */,
 				FAE5ACA726827AC200F070DC /* RequestFactory.swift in Sources */,
+				FAE5ACE32683B5FB00F070DC /* RegistrationRequestFactory.swift in Sources */,
+				FAE5ACED2683B74A00F070DC /* Registration.swift in Sources */,
 				FAE5ACD42683B07900F070DC /* LogoutRequestFactory.swift in Sources */,
 				FAE5ACD92683B0FC00F070DC /* LogoutResult.swift in Sources */,
 				FAE5AC81268278DB00F070DC /* LoginResult.swift in Sources */,
@@ -539,6 +550,7 @@
 				FAE5AC3D267F885F00F070DC /* AppDelegate.swift in Sources */,
 				FAE5ACA226827A1C00F070DC /* Auth.swift in Sources */,
 				FAE5AC87268278F600F070DC /* User.swift in Sources */,
+				FAE5ACE82683B6A200F070DC /* RegistrationResult.swift in Sources */,
 				FAE5AC3F267F885F00F070DC /* SceneDelegate.swift in Sources */,
 				FAE5ACC226827D6200F070DC /* RequestRouter.swift in Sources */,
 			);
