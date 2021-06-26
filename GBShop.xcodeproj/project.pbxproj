@@ -39,6 +39,7 @@
 		FAE5AD042683BF5E00F070DC /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD032683BF5E00F070DC /* UserUpdate.swift */; };
 		FAE5AD1F268753F400F070DC /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */; };
 		FAE5AD2426875AFE00F070DC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD2326875AFE00F070DC /* Config.swift */; };
+		FAE5AD382687627700F070DC /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD372687627700F070DC /* ResultTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		FAE5AD032683BF5E00F070DC /* UserUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
 		FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		FAE5AD2326875AFE00F070DC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		FAE5AD372687627700F070DC /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 		FAE5AC52267F887100F070DC /* GBShopTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAE5AD2826875F5800F070DC /* Entity */,
 				FAE5AC53267F887100F070DC /* GBShopTests.swift */,
 				FAE5AC55267F887200F070DC /* Info.plist */,
 				FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */,
@@ -325,6 +328,14 @@
 				FAE5AD032683BF5E00F070DC /* UserUpdate.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		FAE5AD2826875F5800F070DC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5AD372687627700F070DC /* ResultTests.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -595,6 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE5AD382687627700F070DC /* ResultTests.swift in Sources */,
 				FAE5AC54267F887100F070DC /* GBShopTests.swift in Sources */,
 				FAE5AD1F268753F400F070DC /* ResponseCodableTests.swift in Sources */,
 			);
