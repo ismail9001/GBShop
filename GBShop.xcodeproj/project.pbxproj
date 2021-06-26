@@ -37,6 +37,8 @@
 		FAE5ACFA2683BEF800F070DC /* UserUpdateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACF92683BEF800F070DC /* UserUpdateResult.swift */; };
 		FAE5ACFF2683BF2A00F070DC /* UserUpdateRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5ACFE2683BF2A00F070DC /* UserUpdateRequestFactory.swift */; };
 		FAE5AD042683BF5E00F070DC /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD032683BF5E00F070DC /* UserUpdate.swift */; };
+		FAE5AD1F268753F400F070DC /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */; };
+		FAE5AD2426875AFE00F070DC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD2326875AFE00F070DC /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		FAE5ACF92683BEF800F070DC /* UserUpdateResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdateResult.swift; sourceTree = "<group>"; };
 		FAE5ACFE2683BF2A00F070DC /* UserUpdateRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdateRequestFactory.swift; sourceTree = "<group>"; };
 		FAE5AD032683BF5E00F070DC /* UserUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
+		FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
+		FAE5AD2326875AFE00F070DC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,7 @@
 			children = (
 				FAE5AC53267F887100F070DC /* GBShopTests.swift */,
 				FAE5AC55267F887200F070DC /* Info.plist */,
+				FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */,
 			);
 			path = GBShopTests;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				FAE5AC4A267F887100F070DC /* Info.plist */,
+				FAE5AD2326875AFE00F070DC /* Config.swift */,
 			);
 			path = Environments;
 			sourceTree = "<group>";
@@ -577,6 +583,7 @@
 				FAE5ACA226827A1C00F070DC /* Auth.swift in Sources */,
 				FAE5AC87268278F600F070DC /* User.swift in Sources */,
 				FAE5ACE82683B6A200F070DC /* RegistrationResult.swift in Sources */,
+				FAE5AD2426875AFE00F070DC /* Config.swift in Sources */,
 				FAE5AC3F267F885F00F070DC /* SceneDelegate.swift in Sources */,
 				FAE5ACFA2683BEF800F070DC /* UserUpdateResult.swift in Sources */,
 				FAE5ACFF2683BF2A00F070DC /* UserUpdateRequestFactory.swift in Sources */,
@@ -589,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE5AC54267F887100F070DC /* GBShopTests.swift in Sources */,
+				FAE5AD1F268753F400F070DC /* ResponseCodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
