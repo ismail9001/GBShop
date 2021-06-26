@@ -58,7 +58,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(String(describing: error))
             }
         }
+        
+        let getCatalog = requestFactory.makeGetCatalogRequestFactory()
+        
+        getCatalog.getCatalog(pageNumber: 1, categoryId: 1) { response in
+            print(response)
+            print("----")
+            switch response.result {
+            case .success(let result):
+                print (result)
+            case .failure(let error):
+                print(error.localizedDescription)
+                print(String(describing: error))
+            }
+        }
+        
+        let getProductById = requestFactory.makeGetProductByIdRequestFactory()
+        
+        getProductById.getProductById(productId: 123) { response in
+            switch response.result {
+            case .success(let result):
+                print (result)
+            case .failure(let error):
+                print(error.localizedDescription)
+                print(String(describing: error))
+            }
+        }
+        
         return true
+        
     }
 
     // MARK: UISceneSession Lifecycle
@@ -74,7 +102,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 

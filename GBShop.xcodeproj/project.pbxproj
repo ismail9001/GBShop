@@ -40,6 +40,13 @@
 		FAE5AD1F268753F400F070DC /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */; };
 		FAE5AD2426875AFE00F070DC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD2326875AFE00F070DC /* Config.swift */; };
 		FAE5AD382687627700F070DC /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD372687627700F070DC /* ResultTests.swift */; };
+		FAE5AD5C2687AED500F070DC /* CatalogDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD5B2687AED500F070DC /* CatalogDataResult.swift */; };
+		FAE5AD642687AF2500F070DC /* ProductDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD632687AF2500F070DC /* ProductDetailResult.swift */; };
+		FAE5AD692687AFBD00F070DC /* CatalogRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD682687AFBD00F070DC /* CatalogRequestFactory.swift */; };
+		FAE5AD6E2687B03300F070DC /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD6D2687B03300F070DC /* Catalog.swift */; };
+		FAE5AD7B2687B6F100F070DC /* ProductRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD7A2687B6F100F070DC /* ProductRequestFactory.swift */; };
+		FAE5AD892687B86B00F070DC /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD882687B86B00F070DC /* ProductInfo.swift */; };
+		FAE5AD8F2687BC8D00F070DC /* ProductShortResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD8E2687BC8D00F070DC /* ProductShortResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +112,13 @@
 		FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		FAE5AD2326875AFE00F070DC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FAE5AD372687627700F070DC /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
+		FAE5AD5B2687AED500F070DC /* CatalogDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataResult.swift; sourceTree = "<group>"; };
+		FAE5AD632687AF2500F070DC /* ProductDetailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailResult.swift; sourceTree = "<group>"; };
+		FAE5AD682687AFBD00F070DC /* CatalogRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRequestFactory.swift; sourceTree = "<group>"; };
+		FAE5AD6D2687B03300F070DC /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		FAE5AD7A2687B6F100F070DC /* ProductRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRequestFactory.swift; sourceTree = "<group>"; };
+		FAE5AD882687B86B00F070DC /* ProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfo.swift; sourceTree = "<group>"; };
+		FAE5AD8E2687BC8D00F070DC /* ProductShortResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductShortResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +256,9 @@
 				FAE5ACD82683B0FC00F070DC /* LogoutResult.swift */,
 				FAE5ACE72683B6A200F070DC /* RegistrationResult.swift */,
 				FAE5ACF92683BEF800F070DC /* UserUpdateResult.swift */,
+				FAE5AD5B2687AED500F070DC /* CatalogDataResult.swift */,
+				FAE5AD632687AF2500F070DC /* ProductDetailResult.swift */,
+				FAE5AD8E2687BC8D00F070DC /* ProductShortResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -289,6 +306,8 @@
 		FAE5AC8E2682792D00F070DC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FAE5AD792687B6D500F070DC /* Product */,
+				FAE5AD5A2687AEAB00F070DC /* Catalog */,
 				FAE5AD092683C2E700F070DC /* User */,
 				FAE5AD082683C2CA00F070DC /* Auth */,
 				FAE5ACA626827AC200F070DC /* RequestFactory.swift */,
@@ -336,6 +355,24 @@
 				FAE5AD372687627700F070DC /* ResultTests.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		FAE5AD5A2687AEAB00F070DC /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5AD682687AFBD00F070DC /* CatalogRequestFactory.swift */,
+				FAE5AD6D2687B03300F070DC /* Catalog.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		FAE5AD792687B6D500F070DC /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5AD7A2687B6F100F070DC /* ProductRequestFactory.swift */,
+				FAE5AD882687B86B00F070DC /* ProductInfo.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,10 +616,15 @@
 				FAE5ACAD26827BF900F070DC /* AbstractErrorParser.swift in Sources */,
 				FAE5AD042683BF5E00F070DC /* UserUpdate.swift in Sources */,
 				FAE5ACDE2683B13A00F070DC /* Logout.swift in Sources */,
+				FAE5AD892687B86B00F070DC /* ProductInfo.swift in Sources */,
+				FAE5AD8F2687BC8D00F070DC /* ProductShortResult.swift in Sources */,
 				FAE5ACA726827AC200F070DC /* RequestFactory.swift in Sources */,
 				FAE5ACE32683B5FB00F070DC /* RegistrationRequestFactory.swift in Sources */,
 				FAE5ACED2683B74A00F070DC /* Registration.swift in Sources */,
+				FAE5AD5C2687AED500F070DC /* CatalogDataResult.swift in Sources */,
+				FAE5AD642687AF2500F070DC /* ProductDetailResult.swift in Sources */,
 				FAE5ACD42683B07900F070DC /* LogoutRequestFactory.swift in Sources */,
+				FAE5AD6E2687B03300F070DC /* Catalog.swift in Sources */,
 				FAE5ACD92683B0FC00F070DC /* LogoutResult.swift in Sources */,
 				FAE5AC81268278DB00F070DC /* LoginResult.swift in Sources */,
 				FAE5ACBC26827D1800F070DC /* DataRequest.swift in Sources */,
@@ -597,7 +639,9 @@
 				FAE5AD2426875AFE00F070DC /* Config.swift in Sources */,
 				FAE5AC3F267F885F00F070DC /* SceneDelegate.swift in Sources */,
 				FAE5ACFA2683BEF800F070DC /* UserUpdateResult.swift in Sources */,
+				FAE5AD7B2687B6F100F070DC /* ProductRequestFactory.swift in Sources */,
 				FAE5ACFF2683BF2A00F070DC /* UserUpdateRequestFactory.swift in Sources */,
+				FAE5AD692687AFBD00F070DC /* CatalogRequestFactory.swift in Sources */,
 				FAE5ACC226827D6200F070DC /* RequestRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
