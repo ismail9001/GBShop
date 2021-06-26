@@ -84,4 +84,34 @@ class ResponseCodableTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 10.0)
     }
+    
+    func testShouldGetProductById() throws {
+        
+        let getProductById = requestFactory.makeGetProductByIdRequestFactory()
+        
+        getProductById.getProductById(productId: 123) { response in
+            switch response.result {
+            case .success(_): break
+            case .failure(let error):
+                XCTFail(String(describing: error))
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testShouldGetCatalog() throws {
+        
+        let getCatalog = requestFactory.makeGetCatalogRequestFactory()
+        
+        getCatalog.getCatalog(pageNumber: 1, categoryId: 1) { response in
+            switch response.result {
+            case .success(_): break
+            case .failure(let error):
+                XCTFail(String(describing: error))
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
 }

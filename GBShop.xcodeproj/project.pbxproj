@@ -16,7 +16,6 @@
 		FAE5AC44267F885F00F070DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE5AC42267F885F00F070DC /* Main.storyboard */; };
 		FAE5AC46267F887100F070DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE5AC45267F887100F070DC /* Assets.xcassets */; };
 		FAE5AC49267F887100F070DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE5AC47267F887100F070DC /* LaunchScreen.storyboard */; };
-		FAE5AC54267F887100F070DC /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AC53267F887100F070DC /* GBShopTests.swift */; };
 		FAE5AC5F267F887200F070DC /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AC5E267F887200F070DC /* GBShopUITests.swift */; };
 		FAE5AC81268278DB00F070DC /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AC80268278DB00F070DC /* LoginResult.swift */; };
 		FAE5AC87268278F600F070DC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AC86268278F600F070DC /* User.swift */; };
@@ -85,7 +84,6 @@
 		FAE5AC48267F887100F070DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAE5AC4A267F887100F070DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE5AC4F267F887100F070DC /* GBShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAE5AC53267F887100F070DC /* GBShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopTests.swift; sourceTree = "<group>"; };
 		FAE5AC55267F887200F070DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE5AC5A267F887200F070DC /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE5AC5E267F887200F070DC /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
@@ -211,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				FAE5AD2826875F5800F070DC /* Entity */,
-				FAE5AC53267F887100F070DC /* GBShopTests.swift */,
 				FAE5AC55267F887200F070DC /* Info.plist */,
 				FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */,
 			);
@@ -651,7 +648,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE5AD382687627700F070DC /* ResultTests.swift in Sources */,
-				FAE5AC54267F887100F070DC /* GBShopTests.swift in Sources */,
 				FAE5AD1F268753F400F070DC /* ResponseCodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

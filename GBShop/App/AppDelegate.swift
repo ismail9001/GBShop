@@ -62,8 +62,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let getCatalog = requestFactory.makeGetCatalogRequestFactory()
         
         getCatalog.getCatalog(pageNumber: 1, categoryId: 1) { response in
-            print(response)
-            print("----")
             switch response.result {
             case .success(let result):
                 print (result)
