@@ -5,7 +5,7 @@
 //  Created by macbook on 22.06.2021.
 //
 
-struct User: Codable {
+struct User: Codable, Equatable {
     let id: Int
     let login: String
     let name: String
