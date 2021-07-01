@@ -8,5 +8,5 @@
 import Foundation
 
 final class Config {
-    public static let url = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    public static let url = URL(string: "https://conservative-whistler-57307.herokuapp.com/")!
 }
