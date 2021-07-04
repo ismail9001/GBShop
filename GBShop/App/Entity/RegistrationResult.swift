@@ -8,4 +8,9 @@
 struct RegistrationResult: Codable {
     let result: Int
     let userMessage: String
+    
+    enum CodingKeys: String, CodingKey {
+        case result = "result"
+        case userMessage = "user_message"
+    }
 }

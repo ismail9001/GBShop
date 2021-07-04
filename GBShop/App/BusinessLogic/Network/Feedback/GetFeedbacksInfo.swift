@@ -1,13 +1,13 @@
 //
-//  ProductInfo.swift
+//  GetFeedbacksInfo.swift
 //  GBShop
 //
-//  Created by macbook on 26.06.2021.
+//  Created by macbook on 04.07.2021.
 //
 
 import Alamofire
 
-class ProductInfo: AbstractRequestFactory {
+class GetFeedbacksInfo: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -23,22 +23,24 @@ class ProductInfo: AbstractRequestFactory {
     }
 }
 
-extension ProductInfo: ProductRequestFactory {
-    func getProductById(productId: Int, completionHandler: @escaping (AFDataResponse<ProductDetailResult>) -> Void) {
-        let requestModel = ProductData(baseUrl: baseUrl, productId: productId)
+extension GetFeedbacksInfo: GetFeedbacksRequestFactory {
+    func getFeedbacks(pageNumber: Int, productId: Int, completionHandler: @escaping (AFDataResponse<GetFeedbacksResult>) -> Void) {
+        let requestModel = GetFeedbacksData(baseUrl: baseUrl, pageNumber: pageNumber, productId: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
-extension ProductInfo {
-    struct ProductData: RequestRouter {
+extension GetFeedbacksInfo {
+    struct GetFeedbacksData: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = "getGoodById"
+        let path: String = "getFeedbacks"
+        let pageNumber: Int
         let productId: Int
         var parameters: Parameters? {
             return [
-                "id_product": productId
+                "page_number": pageNumber,
+                "product_id": productId
             ]
         }
     }
