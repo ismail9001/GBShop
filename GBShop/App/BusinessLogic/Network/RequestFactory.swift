@@ -52,4 +52,19 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return ProductInfo(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
+    
+    func makeGetFeedbacksRequestFactory() -> GetFeedbacksRequestFactory {
+        let errorParser = makeErrorParser()
+        return GetFeedbacksInfo(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeAddFeedbackRequestFactory() -> AddFeedbackRequestFactory {
+        let errorParser = makeErrorParser()
+        return AddFeedbackInfo(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeDeleteFeedbackRequestFactory() -> DeleteFeedbackRequestFactory {
+        let errorParser = makeErrorParser()
+        return DeleteFeedbackInfo(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
 }

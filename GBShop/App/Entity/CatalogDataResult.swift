@@ -8,12 +8,12 @@
 import Foundation
 
 struct CatalogDataResult :Codable {
-    let products: [ProductShortResult]
+    let catalog: [ProductShortResult]
+    let pageNumber: Int
     
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        products = try container.decode([ProductShortResult].self)
+    enum CodingKeys: String, CodingKey {
+        case catalog = "catalog"
+        case pageNumber = "page_number"
     }
+
 }
-
-

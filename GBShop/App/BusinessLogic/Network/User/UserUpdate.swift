@@ -33,8 +33,8 @@ extension UserUpdate: UserUpdateRequestFactory {
 extension UserUpdate {
     struct UpdatedUser: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "changeUserData.json"
+        let method: HTTPMethod = .post
+        let path: String = "user_update"
         let userId: Int
         let login: String
         let password: String

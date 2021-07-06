@@ -1,13 +1,13 @@
 //
-//  ProductInfo.swift
+//  DeleteFeedbackInfo.swift
 //  GBShop
 //
-//  Created by macbook on 26.06.2021.
+//  Created by macbook on 04.07.2021.
 //
 
 import Alamofire
 
-class ProductInfo: AbstractRequestFactory {
+class DeleteFeedbackInfo: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -23,22 +23,22 @@ class ProductInfo: AbstractRequestFactory {
     }
 }
 
-extension ProductInfo: ProductRequestFactory {
-    func getProductById(productId: Int, completionHandler: @escaping (AFDataResponse<ProductDetailResult>) -> Void) {
-        let requestModel = ProductData(baseUrl: baseUrl, productId: productId)
+extension DeleteFeedbackInfo: DeleteFeedbackRequestFactory {
+    func deleteFeedback(feedbackId: Int, completionHandler: @escaping (AFDataResponse<DeleteFeedbackResult>) -> Void) {
+        let requestModel = DeleteFeedbackData(baseUrl: baseUrl, feedbackId: feedbackId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
-extension ProductInfo {
-    struct ProductData: RequestRouter {
+extension DeleteFeedbackInfo {
+    struct DeleteFeedbackData: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = "getGoodById"
-        let productId: Int
+        let path: String = "removeFeedback"
+        let feedbackId: Int
         var parameters: Parameters? {
             return [
-                "id_product": productId
+                "id_comment": feedbackId
             ]
         }
     }

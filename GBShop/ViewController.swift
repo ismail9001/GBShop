@@ -13,10 +13,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        deleteFeedback()
+        getFeedbacks()
+        addFeedback()
+        getCatalog()
         registration()
         updateUser()
         auth()
-        getCatalog()
         getProductByID()
     }
     
@@ -28,6 +32,7 @@ class ViewController: UIViewController {
             case .success(let result):
                 print (result)
             case .failure(let error):
+                print(String(describing: error))
                 print(error.localizedDescription)
             }
         }
@@ -41,8 +46,8 @@ class ViewController: UIViewController {
             case .success(let result):
                 print (result)
             case .failure(let error):
-                print(error.localizedDescription)
                 print(String(describing: error))
+                print(error.localizedDescription)
             }
         }
     }
@@ -65,8 +70,8 @@ class ViewController: UIViewController {
                     }
                 }
             case .failure(let error):
-                print(error.localizedDescription)
                 print(String(describing: error))
+                print(error.localizedDescription)
             }
         }
     }
@@ -80,11 +85,10 @@ class ViewController: UIViewController {
             case .success(let result):
                 print (result)
             case .failure(let error):
-                print(error.localizedDescription)
                 print(String(describing: error))
+                print(error.localizedDescription)
             }
         }
-        
     }
     
     func getProductByID() {
@@ -96,8 +100,47 @@ class ViewController: UIViewController {
             case .success(let result):
                 print (result)
             case .failure(let error):
-                print(error.localizedDescription)
                 print(String(describing: error))
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getFeedbacks() {
+        let getFeedbacksRequest = requestFactory.makeGetFeedbacksRequestFactory()
+        getFeedbacksRequest.getFeedbacks(pageNumber: 1, productId: 123) { response in
+            switch response.result {
+            case .success(let result):
+                print (result)
+            case .failure(let error):
+                print(String(describing: error))
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func addFeedback() {
+        let addFeedbackRequest = requestFactory.makeAddFeedbackRequestFactory()
+        addFeedbackRequest.addFeedback(userId: 123, feedbackText: "My feedback") { response in
+            switch response.result {
+            case .success(let result):
+                print (result)
+            case .failure(let error):
+                print(String(describing: error))
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func deleteFeedback() {
+        let deleteFeedbackRequest = requestFactory.makeDeleteFeedbackRequestFactory()
+        deleteFeedbackRequest.deleteFeedback(feedbackId: 123) { response in
+            switch response.result {
+            case .success(let result):
+                print (result)
+            case .failure(let error):
+                print(String(describing: error))
+                print(error.localizedDescription)
             }
         }
     }

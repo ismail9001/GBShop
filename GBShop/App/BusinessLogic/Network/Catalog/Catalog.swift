@@ -33,8 +33,8 @@ extension Catalog: CatalogRequestFactory {
 extension Catalog {
     struct CatalogData: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "catalogData.json"
+        let method: HTTPMethod = .post
+        let path: String = "catalog"
         let pageNumber: Int
         let categoryId: Int
         var parameters: Parameters? {

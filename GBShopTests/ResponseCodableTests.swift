@@ -85,6 +85,50 @@ class ResponseCodableTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
+    func testShouldGetFeedbacks() throws {
+        
+        let getFeedbacks = requestFactory.makeGetFeedbacksRequestFactory()
+        
+        getFeedbacks.getFeedbacks(pageNumber: 2, productId: 123 ) { response in
+            switch response.result {
+            case .success(_): break
+            case .failure(let error):
+                XCTFail(String(describing: error))
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testShouldDeleteFeedback() throws {
+        
+        let deleteFeedback = requestFactory.makeDeleteFeedbackRequestFactory()
+        
+        deleteFeedback.deleteFeedback(feedbackId: 123) { response in
+            switch response.result {
+            case .success(_): break
+            case .failure(let error):
+                XCTFail(String(describing: error))
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testShouldAddFeedback() throws {
+        
+        let addFeedback = requestFactory.makeAddFeedbackRequestFactory()
+        
+        addFeedback.addFeedback(userId: 123, feedbackText: "text") { response in
+            switch response.result {
+            case .success(_): break
+            case .failure(let error):
+                XCTFail(String(describing: error))
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
     func testShouldGetProductById() throws {
         
         let getProductById = requestFactory.makeGetProductByIdRequestFactory()
