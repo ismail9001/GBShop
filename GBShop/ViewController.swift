@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         updateUser()
         auth()
         getProductByID()
+        addToBasket()
+        deleteFromBasket()
+        payBasket()
     }
     
     func registration() {
@@ -145,5 +148,42 @@ class ViewController: UIViewController {
         }
     }
     
+    func addToBasket() {
+        let addToBasketRequest = requestFactory.makeAddToBasketRequestFactory()
+        addToBasketRequest.addToBasket(productId: 123, quantity: 1) { response in
+            switch response.result {
+            case .success(let result):
+                print (result)
+            case .failure(let error):
+                print(String(describing: error))
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func deleteFromBasket() {
+        let deleteFromBasketRequest = requestFactory.makeDeleteFromBasketRequestFactory()
+        deleteFromBasketRequest.deleteFromBasket(productId: 123) { response in
+            switch response.result {
+            case .success(let result):
+                print (result)
+            case .failure(let error):
+                print(String(describing: error))
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func payBasket() {
+        let payBasketRequest = requestFactory.makePayBasketRequestFactory()
+        payBasketRequest.payBasket(basketId: 123) { response in
+            switch response.result {
+            case .success(let result):
+                print (result)
+            case .failure(let error):
+                print(String(describing: error))
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
-

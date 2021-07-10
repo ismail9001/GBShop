@@ -8,6 +8,6 @@
 import Foundation
 
 final class Config {
-    public static let url = URL(string: "https://conservative-whistler-57307.herokuapp.com/")!
-    //public static let url = URL(string: "http://127.0.0.1:8080/")!
+    //public static let url = URL(string: "https://conservative-whistler-57307.herokuapp.com/")!
+    public static let url = URL(string: "http://127.0.0.1:8080/")!
 }

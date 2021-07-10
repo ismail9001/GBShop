@@ -10,6 +10,15 @@
 		23F13501A450B588FDADF601 /* Pods_GBShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5913A403C7DC942FEE2754EC /* Pods_GBShopTests.framework */; };
 		2A80A41E5C6D6E4983C5A6EF /* Pods_GBShop_GBShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6A95A979E171A7C841328F /* Pods_GBShop_GBShopUITests.framework */; };
 		4599BAC5E03C3EBCCDF21D14 /* Pods_GBShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1A645066655E09ECB34B56 /* Pods_GBShop.framework */; };
+		FA45419B269987C800FF2A5F /* AddToBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45419A269987C800FF2A5F /* AddToBasketRequestFactory.swift */; };
+		FA4541A02699884F00FF2A5F /* AddToBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45419F2699884F00FF2A5F /* AddToBasket.swift */; };
+		FA4541A62699894000FF2A5F /* AddToBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4541A52699894000FF2A5F /* AddToBasketResult.swift */; };
+		FA4541AE26998A8B00FF2A5F /* DeleteFromBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4541AD26998A8B00FF2A5F /* DeleteFromBasketRequestFactory.swift */; };
+		FA4541B326998AC700FF2A5F /* DeleteFromBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4541B226998AC700FF2A5F /* DeleteFromBasket.swift */; };
+		FA4541B826998B2B00FF2A5F /* DeleteFromBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4541B726998B2B00FF2A5F /* DeleteFromBasketResult.swift */; };
+		FA4541C4269991A900FF2A5F /* PayBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4541C3269991A900FF2A5F /* PayBasketRequestFactory.swift */; };
+		FA4541C9269991E000FF2A5F /* PayBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4541C8269991E000FF2A5F /* PayBasket.swift */; };
+		FA4541CE269992B400FF2A5F /* PayBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4541CD269992B400FF2A5F /* PayBasketResult.swift */; };
 		FAABE3F72691F48A00D16CA1 /* AddFeedbackRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAABE3F62691F48A00D16CA1 /* AddFeedbackRequestFactory.swift */; };
 		FAABE4112691F68100D16CA1 /* AddFeedbackInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAABE4102691F68100D16CA1 /* AddFeedbackInfo.swift */; };
 		FAABE4222691F8A900D16CA1 /* DeleteFeedBackRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAABE4212691F8A900D16CA1 /* DeleteFeedBackRequestFactory.swift */; };
@@ -85,9 +94,18 @@
 		D9370A83FE03ED936C9FEBD9 /* Pods-GBShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop.release.xcconfig"; path = "Target Support Files/Pods-GBShop/Pods-GBShop.release.xcconfig"; sourceTree = "<group>"; };
 		E7A3D452746A815137DE3F21 /* Pods-GBShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopTests.debug.xcconfig"; path = "Target Support Files/Pods-GBShopTests/Pods-GBShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6AE00D07B0383A8C63BD51E /* Pods-GBShop-GBShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop-GBShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-GBShop-GBShopUITests/Pods-GBShop-GBShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FA45413F2692416400FF2A5F /* All.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = All.xctestplan; path = TestPlanes/All.xctestplan; sourceTree = SOURCE_ROOT; };
+		FA45413F2692416400FF2A5F /* All.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = All.xctestplan; path = TestPlanes/All.xctestplan; sourceTree = SOURCE_ROOT; };
 		FA454146269241AE00FF2A5F /* Unit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Unit.xctestplan; sourceTree = "<group>"; };
 		FA454147269241C000FF2A5F /* UI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UI.xctestplan; sourceTree = "<group>"; };
+		FA45419A269987C800FF2A5F /* AddToBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketRequestFactory.swift; sourceTree = "<group>"; };
+		FA45419F2699884F00FF2A5F /* AddToBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasket.swift; sourceTree = "<group>"; };
+		FA4541A52699894000FF2A5F /* AddToBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketResult.swift; sourceTree = "<group>"; };
+		FA4541AD26998A8B00FF2A5F /* DeleteFromBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFromBasketRequestFactory.swift; sourceTree = "<group>"; };
+		FA4541B226998AC700FF2A5F /* DeleteFromBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFromBasket.swift; sourceTree = "<group>"; };
+		FA4541B726998B2B00FF2A5F /* DeleteFromBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFromBasketResult.swift; sourceTree = "<group>"; };
+		FA4541C3269991A900FF2A5F /* PayBasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBasketRequestFactory.swift; sourceTree = "<group>"; };
+		FA4541C8269991E000FF2A5F /* PayBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBasket.swift; sourceTree = "<group>"; };
+		FA4541CD269992B400FF2A5F /* PayBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBasketResult.swift; sourceTree = "<group>"; };
 		FAABE3F62691F48A00D16CA1 /* AddFeedbackRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedbackRequestFactory.swift; sourceTree = "<group>"; };
 		FAABE4102691F68100D16CA1 /* AddFeedbackInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedbackInfo.swift; sourceTree = "<group>"; };
 		FAABE4212691F8A900D16CA1 /* DeleteFeedBackRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFeedBackRequestFactory.swift; sourceTree = "<group>"; };
@@ -203,6 +221,62 @@
 			path = TestPlanes;
 			sourceTree = "<group>";
 		};
+		FA454199269987A800FF2A5F /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				FA45419A269987C800FF2A5F /* AddToBasketRequestFactory.swift */,
+				FA45419F2699884F00FF2A5F /* AddToBasket.swift */,
+				FA4541AD26998A8B00FF2A5F /* DeleteFromBasketRequestFactory.swift */,
+				FA4541B226998AC700FF2A5F /* DeleteFromBasket.swift */,
+				FA4541C3269991A900FF2A5F /* PayBasketRequestFactory.swift */,
+				FA4541C8269991E000FF2A5F /* PayBasket.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		FA4541D52699958B00FF2A5F /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				FA4541A52699894000FF2A5F /* AddToBasketResult.swift */,
+				FA4541B726998B2B00FF2A5F /* DeleteFromBasketResult.swift */,
+				FA4541CD269992B400FF2A5F /* PayBasketResult.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		FA4541D62699959D00FF2A5F /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				FAABE42C2691F90600D16CA1 /* AddFeedbackResult.swift */,
+				FAABE4392691FB8600D16CA1 /* DeleteFeedbackResult.swift */,
+				FAABE4482691FD9900D16CA1 /* GetFeedbacksResult.swift */,
+				FAABE44D2691FDFE00D16CA1 /* FeedbackResult.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		FA4541D7269995C200FF2A5F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5AC80268278DB00F070DC /* LoginResult.swift */,
+				FAE5AC86268278F600F070DC /* User.swift */,
+				FAE5ACD82683B0FC00F070DC /* LogoutResult.swift */,
+				FAE5ACE72683B6A200F070DC /* RegistrationResult.swift */,
+				FAE5ACF92683BEF800F070DC /* UserUpdateResult.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FA4541D8269995DA00FF2A5F /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5AD5B2687AED500F070DC /* CatalogDataResult.swift */,
+				FAE5AD632687AF2500F070DC /* ProductDetailResult.swift */,
+				FAE5AD8E2687BC8D00F070DC /* ProductShortResult.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
 		FAABE3F52691F46700D16CA1 /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,18 +369,10 @@
 		FAE5AC71267F907700F070DC /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				FAE5AC80268278DB00F070DC /* LoginResult.swift */,
-				FAE5AC86268278F600F070DC /* User.swift */,
-				FAE5ACD82683B0FC00F070DC /* LogoutResult.swift */,
-				FAE5ACE72683B6A200F070DC /* RegistrationResult.swift */,
-				FAE5ACF92683BEF800F070DC /* UserUpdateResult.swift */,
-				FAE5AD5B2687AED500F070DC /* CatalogDataResult.swift */,
-				FAE5AD632687AF2500F070DC /* ProductDetailResult.swift */,
-				FAE5AD8E2687BC8D00F070DC /* ProductShortResult.swift */,
-				FAABE42C2691F90600D16CA1 /* AddFeedbackResult.swift */,
-				FAABE4392691FB8600D16CA1 /* DeleteFeedbackResult.swift */,
-				FAABE4482691FD9900D16CA1 /* GetFeedbacksResult.swift */,
-				FAABE44D2691FDFE00D16CA1 /* FeedbackResult.swift */,
+				FA4541D8269995DA00FF2A5F /* Catalog */,
+				FA4541D7269995C200FF2A5F /* Auth */,
+				FA4541D62699959D00FF2A5F /* Feedback */,
+				FA4541D52699958B00FF2A5F /* Basket */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -354,6 +420,7 @@
 		FAE5AC8E2682792D00F070DC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FA454199269987A800FF2A5F /* Basket */,
 				FAABE3F52691F46700D16CA1 /* Feedback */,
 				FAE5AD792687B6D500F070DC /* Product */,
 				FAE5AD5A2687AEAB00F070DC /* Catalog */,
@@ -662,6 +729,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4541A02699884F00FF2A5F /* AddToBasket.swift in Sources */,
 				FAE5ACAD26827BF900F070DC /* AbstractErrorParser.swift in Sources */,
 				FAE5AD042683BF5E00F070DC /* UserUpdate.swift in Sources */,
 				FAABE43F2691FC6500D16CA1 /* GetFeedbacksRequestFactory.swift in Sources */,
@@ -670,9 +738,13 @@
 				FAE5AD8F2687BC8D00F070DC /* ProductShortResult.swift in Sources */,
 				FAABE4492691FD9900D16CA1 /* GetFeedbacksResult.swift in Sources */,
 				FAE5ACA726827AC200F070DC /* RequestFactory.swift in Sources */,
+				FA4541CE269992B400FF2A5F /* PayBasketResult.swift in Sources */,
 				FAE5ACE32683B5FB00F070DC /* RegistrationRequestFactory.swift in Sources */,
+				FA4541B326998AC700FF2A5F /* DeleteFromBasket.swift in Sources */,
 				FAE5ACED2683B74A00F070DC /* Registration.swift in Sources */,
+				FA4541AE26998A8B00FF2A5F /* DeleteFromBasketRequestFactory.swift in Sources */,
 				FAABE43A2691FB8600D16CA1 /* DeleteFeedbackResult.swift in Sources */,
+				FA4541C9269991E000FF2A5F /* PayBasket.swift in Sources */,
 				FAE5AD5C2687AED500F070DC /* CatalogDataResult.swift in Sources */,
 				FAE5AD642687AF2500F070DC /* ProductDetailResult.swift in Sources */,
 				FAABE4222691F8A900D16CA1 /* DeleteFeedBackRequestFactory.swift in Sources */,
@@ -683,10 +755,12 @@
 				FAE5AD6E2687B03300F070DC /* Catalog.swift in Sources */,
 				FAABE44E2691FDFE00D16CA1 /* FeedbackResult.swift in Sources */,
 				FAE5ACD92683B0FC00F070DC /* LogoutResult.swift in Sources */,
+				FA4541A62699894000FF2A5F /* AddToBasketResult.swift in Sources */,
 				FAE5AC81268278DB00F070DC /* LoginResult.swift in Sources */,
 				FAE5ACBC26827D1800F070DC /* DataRequest.swift in Sources */,
 				FAABE3F72691F48A00D16CA1 /* AddFeedbackRequestFactory.swift in Sources */,
 				FAE5AC41267F885F00F070DC /* ViewController.swift in Sources */,
+				FA4541B826998B2B00FF2A5F /* DeleteFromBasketResult.swift in Sources */,
 				FAE5AC902682794400F070DC /* AuthRequestFactory.swift in Sources */,
 				FAE5ACB726827CB700F070DC /* CustomDecodableSerializer.swift in Sources */,
 				FAE5ACB226827C5100F070DC /* ErrorParser.swift in Sources */,
@@ -699,6 +773,8 @@
 				FAE5ACFA2683BEF800F070DC /* UserUpdateResult.swift in Sources */,
 				FAE5AD7B2687B6F100F070DC /* ProductRequestFactory.swift in Sources */,
 				FAE5ACFF2683BF2A00F070DC /* UserUpdateRequestFactory.swift in Sources */,
+				FA45419B269987C800FF2A5F /* AddToBasketRequestFactory.swift in Sources */,
+				FA4541C4269991A900FF2A5F /* PayBasketRequestFactory.swift in Sources */,
 				FAE5AD692687AFBD00F070DC /* CatalogRequestFactory.swift in Sources */,
 				FAABE4112691F68100D16CA1 /* AddFeedbackInfo.swift in Sources */,
 				FAE5ACC226827D6200F070DC /* RequestRouter.swift in Sources */,
