@@ -24,14 +24,14 @@ class ResultTests: XCTestCase {
         XCTAssertEqual(logoutResult.result, 1)
         XCTAssertEqual(logoutResult2.result, 2)
     }
-    
+
     func testUserUpdateResult() throws {
         let userUpdateResult = UserUpdateResult(result: 1)
         let userUpdateResult2 = UserUpdateResult(result: 2)
         XCTAssertEqual(userUpdateResult.result, 1)
         XCTAssertEqual(userUpdateResult2.result, 2)
     }
-    
+
     func testRegistrationResult() throws {
         let registrationResult = RegistrationResult(result: 1, userMessage: "success")
         let registrationResult2 = RegistrationResult(result: 0, userMessage: "failed")
@@ -40,7 +40,7 @@ class ResultTests: XCTestCase {
         XCTAssertEqual(registrationResult2.result, 0)
         XCTAssertEqual(registrationResult2.userMessage, "failed")
     }
-    
+
     func testLoginResult() throws {
         let user = User(id: 123, login: "user", name: "name", lastname: "lastname")
         let loginResult = LoginResult(result: 1, user: user)
@@ -49,7 +49,7 @@ class ResultTests: XCTestCase {
         XCTAssertEqual(loginResult2.result, 2)
         XCTAssertEqual(loginResult.user, user)
     }
-    
+
     func testUser() throws {
         let user = User(id: 123, login: "user", name: "name", lastname: "lastname")
         XCTAssertEqual(user.id, 123)

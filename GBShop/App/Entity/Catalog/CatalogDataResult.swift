@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct CatalogDataResult :Codable {
+struct CatalogDataResult: Codable {
     let catalog: [ProductShortResult]
     let pageNumber: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case catalog = "catalog"
         case pageNumber = "page_number"

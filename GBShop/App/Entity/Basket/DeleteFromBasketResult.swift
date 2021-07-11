@@ -8,7 +8,7 @@
 struct DeleteFromBasketResult: Codable {
     let result: Int
     let errorMessage: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case result = "result"
         case errorMessage =  "error_message"

@@ -8,6 +8,12 @@
 import Alamofire
 
 protocol UserUpdateRequestFactory {
-    func updateUser(userId: Int, username: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (AFDataResponse<UserUpdateResult>) -> Void)
+    func updateUser(userId: Int,
+                    username: String,
+                    password: String,
+                    email: String,
+                    gender: String,
+                    creditCard: String,
+                    bio: String,
+                    completionHandler: @escaping (AFDataResponse<UserUpdateResult>) -> Void)
 }
-
