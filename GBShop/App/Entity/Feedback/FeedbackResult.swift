@@ -8,12 +8,12 @@
 import Foundation
 
 struct FeedBackResult: Codable {
-    let id: Int
+    let feedbackId: Int
     let text: String
     let userId: Int
 
     enum CodingKeys: String, CodingKey {
-        case id = "id_feedback"
+        case feedbackId = "id_feedback"
         case text = "text"
         case userId = "user_id"
     }

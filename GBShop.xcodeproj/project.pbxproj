@@ -10,6 +10,15 @@
 		23F13501A450B588FDADF601 /* Pods_GBShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5913A403C7DC942FEE2754EC /* Pods_GBShopTests.framework */; };
 		2A80A41E5C6D6E4983C5A6EF /* Pods_GBShop_GBShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6A95A979E171A7C841328F /* Pods_GBShop_GBShopUITests.framework */; };
 		4599BAC5E03C3EBCCDF21D14 /* Pods_GBShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1A645066655E09ECB34B56 /* Pods_GBShop.framework */; };
+		FA09872A269F675B005925E7 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098729269F675B005925E7 /* MainTabBarViewController.swift */; };
+		FA098737269F78BE005925E7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098736269F78BE005925E7 /* UIApplicationExtension.swift */; };
+		FA09873D269F79E8005925E7 /* CatalogScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09873C269F79E8005925E7 /* CatalogScreenAssembler.swift */; };
+		FA098746269F7A30005925E7 /* CatalogScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA098745269F7A30005925E7 /* CatalogScreen.storyboard */; };
+		FA09874B269F7A8A005925E7 /* CatalogScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09874A269F7A8A005925E7 /* CatalogScreenViewController.swift */; };
+		FA098757269F7BC3005925E7 /* CatalogScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098756269F7BC3005925E7 /* CatalogScreenPresenter.swift */; };
+		FA09875C269F7C2A005925E7 /* CatalogScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09875B269F7C2A005925E7 /* CatalogScreenRouter.swift */; };
+		FA098761269F7C5E005925E7 /* CatalogScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098760269F7C5E005925E7 /* CatalogScreenInteractor.swift */; };
+		FA098766269F826B005925E7 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098765269F826B005925E7 /* ProductCollectionViewCell.swift */; };
 		FA45419B269987C800FF2A5F /* AddToBasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45419A269987C800FF2A5F /* AddToBasketRequestFactory.swift */; };
 		FA4541A02699884F00FF2A5F /* AddToBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45419F2699884F00FF2A5F /* AddToBasket.swift */; };
 		FA4541A62699894000FF2A5F /* AddToBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4541A52699894000FF2A5F /* AddToBasketResult.swift */; };
@@ -113,6 +122,15 @@
 		D9370A83FE03ED936C9FEBD9 /* Pods-GBShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop.release.xcconfig"; path = "Target Support Files/Pods-GBShop/Pods-GBShop.release.xcconfig"; sourceTree = "<group>"; };
 		E7A3D452746A815137DE3F21 /* Pods-GBShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopTests.debug.xcconfig"; path = "Target Support Files/Pods-GBShopTests/Pods-GBShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6AE00D07B0383A8C63BD51E /* Pods-GBShop-GBShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop-GBShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-GBShop-GBShopUITests/Pods-GBShop-GBShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA098729269F675B005925E7 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		FA098736269F78BE005925E7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		FA09873C269F79E8005925E7 /* CatalogScreenAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenAssembler.swift; sourceTree = "<group>"; };
+		FA098745269F7A30005925E7 /* CatalogScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CatalogScreen.storyboard; sourceTree = "<group>"; };
+		FA09874A269F7A8A005925E7 /* CatalogScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenViewController.swift; sourceTree = "<group>"; };
+		FA098756269F7BC3005925E7 /* CatalogScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenPresenter.swift; sourceTree = "<group>"; };
+		FA09875B269F7C2A005925E7 /* CatalogScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenRouter.swift; sourceTree = "<group>"; };
+		FA098760269F7C5E005925E7 /* CatalogScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenInteractor.swift; sourceTree = "<group>"; };
+		FA098765269F826B005925E7 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA45413F2692416400FF2A5F /* All.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = All.xctestplan; path = TestPlanes/All.xctestplan; sourceTree = SOURCE_ROOT; };
 		FA454146269241AE00FF2A5F /* Unit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Unit.xctestplan; sourceTree = "<group>"; };
 		FA454147269241C000FF2A5F /* UI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UI.xctestplan; sourceTree = "<group>"; };
@@ -249,6 +267,44 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA09873B269F79BE005925E7 /* CatalogScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA098752269F7BA6005925E7 /* Impl */,
+				FA098744269F7A20005925E7 /* View */,
+				FA09873C269F79E8005925E7 /* CatalogScreenAssembler.swift */,
+			);
+			path = CatalogScreen;
+			sourceTree = "<group>";
+		};
+		FA098744269F7A20005925E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA098745269F7A30005925E7 /* CatalogScreen.storyboard */,
+				FA09874A269F7A8A005925E7 /* CatalogScreenViewController.swift */,
+				FA098765269F826B005925E7 /* ProductCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA098752269F7BA6005925E7 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				FA098756269F7BC3005925E7 /* CatalogScreenPresenter.swift */,
+				FA09875B269F7C2A005925E7 /* CatalogScreenRouter.swift */,
+				FA098760269F7C5E005925E7 /* CatalogScreenInteractor.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		FA09876A269F8A13005925E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA098736269F78BE005925E7 /* UIApplicationExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FA45413E269240CA00FF2A5F /* TestPlanes */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,9 +374,11 @@
 		FA454231269B60C900FF2A5F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FA09873B269F79BE005925E7 /* CatalogScreen */,
 				FA4542A1269B860900FF2A5F /* ProfileScreen */,
 				FA454268269B742800FF2A5F /* RegistrationScreen */,
 				FA454232269B60D200FF2A5F /* LoginScreen */,
+				FA098729269F675B005925E7 /* MainTabBarViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -546,6 +604,7 @@
 		FAE5AC74267F909300F070DC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FA09876A269F8A13005925E7 /* Extensions */,
 				FA454262269B717500FF2A5F /* View */,
 				FAE5ACAB26827BDF00F070DC /* Network */,
 			);
@@ -754,6 +813,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE5AC49267F887100F070DC /* LaunchScreen.storyboard in Resources */,
+				FA098746269F7A30005925E7 /* CatalogScreen.storyboard in Resources */,
 				FAE5AC46267F887100F070DC /* Assets.xcassets in Resources */,
 				FA45423D269B616D00FF2A5F /* LoginScreen.storyboard in Resources */,
 				FA4542AC269B869A00FF2A5F /* ProfileScreen.storyboard in Resources */,
@@ -905,6 +965,7 @@
 				FA454258269B633800FF2A5F /* LoginScreenRouter.swift in Sources */,
 				FA4541A02699884F00FF2A5F /* AddToBasket.swift in Sources */,
 				FAE5ACAD26827BF900F070DC /* AbstractErrorParser.swift in Sources */,
+				FA098757269F7BC3005925E7 /* CatalogScreenPresenter.swift in Sources */,
 				FA45424B269B622500FF2A5F /* LoginScreenInteractor.swift in Sources */,
 				FAE5AD042683BF5E00F070DC /* UserUpdate.swift in Sources */,
 				FA454285269B762E00FF2A5F /* RegistrationScreenRouter.swift in Sources */,
@@ -929,6 +990,7 @@
 				FAABE4222691F8A900D16CA1 /* DeleteFeedBackRequestFactory.swift in Sources */,
 				FA4542A3269B864D00FF2A5F /* ProfileScreenAssembler.swift in Sources */,
 				FAABE4352691F9F200D16CA1 /* DeleteFeedbackInfo.swift in Sources */,
+				FA098737269F78BE005925E7 /* UIApplicationExtension.swift in Sources */,
 				FAABE42D2691F90600D16CA1 /* AddFeedbackResult.swift in Sources */,
 				FAABE4442691FCC700D16CA1 /* GetFeedbacksInfo.swift in Sources */,
 				FA45428C269B7F4F00FF2A5F /* UserData.swift in Sources */,
@@ -940,19 +1002,24 @@
 				FAABE44E2691FDFE00D16CA1 /* FeedbackResult.swift in Sources */,
 				FAE5ACD92683B0FC00F070DC /* LogoutResult.swift in Sources */,
 				FA4541A62699894000FF2A5F /* AddToBasketResult.swift in Sources */,
+				FA09875C269F7C2A005925E7 /* CatalogScreenRouter.swift in Sources */,
 				FA4542C4269B884800FF2A5F /* ProfileScreenRouter.swift in Sources */,
 				FAE5AC81268278DB00F070DC /* LoginResult.swift in Sources */,
 				FAE5ACBC26827D1800F070DC /* DataRequest.swift in Sources */,
 				FAABE3F72691F48A00D16CA1 /* AddFeedbackRequestFactory.swift in Sources */,
+				FA09872A269F675B005925E7 /* MainTabBarViewController.swift in Sources */,
 				FAE5AC41267F885F00F070DC /* ViewController.swift in Sources */,
 				FA4541B826998B2B00FF2A5F /* DeleteFromBasketResult.swift in Sources */,
 				FA454264269B71A800FF2A5F /* BaseViewController.swift in Sources */,
+				FA09873D269F79E8005925E7 /* CatalogScreenAssembler.swift in Sources */,
+				FA098766269F826B005925E7 /* ProductCollectionViewCell.swift in Sources */,
 				FAE5AC902682794400F070DC /* AuthRequestFactory.swift in Sources */,
 				FAE5ACB726827CB700F070DC /* CustomDecodableSerializer.swift in Sources */,
 				FA454234269B612E00FF2A5F /* LoginScreenAssembler.swift in Sources */,
 				FAE5ACB226827C5100F070DC /* ErrorParser.swift in Sources */,
 				FAE5AC3D267F885F00F070DC /* AppDelegate.swift in Sources */,
 				FAE5ACA226827A1C00F070DC /* Auth.swift in Sources */,
+				FA098761269F7C5E005925E7 /* CatalogScreenInteractor.swift in Sources */,
 				FAE5AC87268278F600F070DC /* User.swift in Sources */,
 				FAE5ACE82683B6A200F070DC /* RegistrationResult.swift in Sources */,
 				FAE5AD2426875AFE00F070DC /* Config.swift in Sources */,
@@ -965,6 +1032,7 @@
 				FA45419B269987C800FF2A5F /* AddToBasketRequestFactory.swift in Sources */,
 				FA4541C4269991A900FF2A5F /* PayBasketRequestFactory.swift in Sources */,
 				FAE5AD692687AFBD00F070DC /* CatalogRequestFactory.swift in Sources */,
+				FA09874B269F7A8A005925E7 /* CatalogScreenViewController.swift in Sources */,
 				FAABE4112691F68100D16CA1 /* AddFeedbackInfo.swift in Sources */,
 				FAE5ACC226827D6200F070DC /* RequestRouter.swift in Sources */,
 				FA454280269B75B200FF2A5F /* RegistrationScreenPresenter.swift in Sources */,

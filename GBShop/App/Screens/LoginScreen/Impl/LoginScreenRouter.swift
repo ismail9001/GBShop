@@ -22,8 +22,11 @@ class LoginScreenRouter: LoginScreenRouterProtocol {
 
     func openProfileScreen(of user: UserData) {
         DispatchQueue.main.async {
-            let viewController = ProfileScreenAssembler().assemble(user: user)
-            self.viewController.show(viewController, sender: nil)
+            if let window = UIApplication.shared.currentWindow {
+                let viewController = MainTabBarViewController()
+                window.rootViewController = viewController
+                window.makeKeyAndVisible()
+            }
         }
     }
 
