@@ -8,6 +8,9 @@
 import UIKit
 
 protocol CatalogScreenViewControllerProtocol: class {
+    func showAlert(value: String, title: String)
+    func showActivityIndicator()
+    func hideActivityIndicator()
 }
 
 class CatalogScreenViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate, CatalogScreenViewControllerProtocol {
@@ -25,7 +28,7 @@ class CatalogScreenViewController: BaseViewController, UICollectionViewDataSourc
     }
     
     func updateCatalogCollection() {
-        presenter.getCatalog() { [self] catalog in
+        presenter.getCatalog(pageNumber: 1, categoryId: 1) { [self] catalog in
             self.catalog = catalog
             catalogCollectionView.reloadData()
         }

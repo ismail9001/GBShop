@@ -6,7 +6,7 @@
 //
 
 protocol CatalogScreenInteractorProtocol: class {
-    func getCatalog(completion: @escaping ([ProductShortResult]) -> Void)
+    func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping ([ProductShortResult]) -> Void)
 }
 
 class CatalogScreenInteractor: CatalogScreenInteractorProtocol {
@@ -18,14 +18,15 @@ class CatalogScreenInteractor: CatalogScreenInteractorProtocol {
         self.presenter = presenter
     }
     
-    func getCatalog(completion: @escaping ([ProductShortResult]) -> Void) {
+    func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping ([ProductShortResult]) -> Void) {
         let getCatalog = requestFactory.makeGetCatalogRequestFactory()
 
-        getCatalog.getCatalog(pageNumber: 1, categoryId: 1) { response in
+        getCatalog.getCatalog(pageNumber: pageNumber, categoryId: pageNumber) { response in
             switch response.result {
             case .success(let result):
                 completion(result.catalog)
             case .failure(let error):
+                completion([])
                 print(String(describing: error))
                 print(error.localizedDescription)
             }

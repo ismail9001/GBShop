@@ -8,7 +8,7 @@
 import  UIKit
 
 protocol CatalogScreenPresenterProtocol: class {
-    func getCatalog(completion: @escaping ([ProductShortResult]) -> Void)
+    func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping ([ProductShortResult]) -> Void)
 }
 
 class CatalogScreenPresenter: CatalogScreenPresenterProtocol {
@@ -21,9 +21,11 @@ class CatalogScreenPresenter: CatalogScreenPresenterProtocol {
         self.view = view
     }
     
-    func getCatalog(completion: @escaping ([ProductShortResult]) -> Void) {
-        self.interactor.getCatalog() { catalog in
+    func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping ([ProductShortResult]) -> Void) {
+        view.showActivityIndicator()
+        self.interactor.getCatalog(pageNumber: pageNumber, categoryId: categoryId) { catalog in
             DispatchQueue.main.async {
+                self.view.hideActivityIndicator()
                 completion(catalog)
             }
         }
