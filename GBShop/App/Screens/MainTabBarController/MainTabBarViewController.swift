@@ -9,6 +9,8 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -17,20 +19,16 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        let catalogNavigator = UINavigationController()
         let catalogScreen = CatalogScreenAssembler().assemble()
         let catalogImage = UIImage(systemName: "square.grid.2x2")
+        catalogNavigator.viewControllers = [catalogScreen]
         catalogScreen.tabBarItem = UITabBarItem(title: "Каталог", image: catalogImage, tag: 0)
         
-        let profileScreen = ProfileScreenAssembler().assemble(user: UserData(username: "Iskander",
-                                                                             password: "111111",
-                                                                             email: "test@test.ru",
-                                                                             gender: "Male",
-                                                                             creditCard: "5555-5555-5555-5555",
-                                                                             bio: "Im junior swift programmer"))
+        let profileScreen = ProfileScreenAssembler().assemble(user: user)
         let profileImage = UIImage(systemName: "person")
         
         profileScreen.tabBarItem = UITabBarItem(title: "Профиль", image: profileImage, tag: 1)
-        self.viewControllers = [catalogScreen, profileScreen]
+        self.viewControllers = [catalogNavigator, profileScreen]
     }
 }

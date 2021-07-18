@@ -6,6 +6,7 @@
 //
 
 protocol CatalogScreenRouterProtocol: class {
+    func openProductScreen(productId: Int)
 }
 
 class CatalogScreenRouter: CatalogScreenRouterProtocol {
@@ -14,5 +15,10 @@ class CatalogScreenRouter: CatalogScreenRouterProtocol {
 
     init(viewController: CatalogScreenViewController) {
         self.viewController = viewController
+    }
+    
+    func openProductScreen(productId: Int) {
+        let viewController = ProductScreenAssembler().assemble(productId: productId)
+        self.viewController.show(viewController, sender: nil)
     }
 }

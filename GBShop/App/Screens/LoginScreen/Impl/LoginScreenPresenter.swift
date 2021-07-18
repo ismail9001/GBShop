@@ -5,11 +5,12 @@
 //  Created by macbook on 11.07.2021.
 //
 
+import UIKit
+
 protocol LoginScreenPresenterProtocol: class {
+    func checkServerResult(with result: LoginResult)
     func sentData(login: String, password: String)
-    func openProfile(of user: UserData)
     func openRegisterScreen()
-    func showError()
 }
 
 class LoginScreenPresenter: LoginScreenPresenterProtocol {
@@ -27,17 +28,22 @@ class LoginScreenPresenter: LoginScreenPresenterProtocol {
         interactor.login(login: login, password: password)
     }
 
-    func openProfile(of user: UserData) {
-        view.hideActivityIndicator()
-        router.openProfileScreen(of: user)
+    func checkServerResult(with result: LoginResult) {
+        DispatchQueue.main.async { [self] in
+            if result.result == 1,
+               let user = result.user,
+               let window = UIApplication.shared.currentWindow {
+                let viewController = MainTabBarControllerAssembler().assemble(user: user)
+                    window.rootViewController = viewController
+                    window.makeKeyAndVisible()
+            } else if result.result == 0, let errorMessage = result.errorMessage {
+                view.hideActivityIndicator()
+                view.showAlert(value: errorMessage, title: "Ошибка")
+            }
+        }
     }
 
     func openRegisterScreen() {
         router.openRegisterScreen()
-    }
-
-    func showError() {
-        view.hideActivityIndicator()
-        view.showAlert(value: "Пользователь не найден", title: "Ошибка")
     }
 }

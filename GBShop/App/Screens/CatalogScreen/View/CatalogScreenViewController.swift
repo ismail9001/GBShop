@@ -24,6 +24,7 @@ class CatalogScreenViewController: BaseViewController, UICollectionViewDataSourc
         super.viewDidLoad()
         catalogCollectionView.delegate = self
         catalogCollectionView.dataSource = self
+        self.title = "Каталог"
         updateCatalogCollection()
     }
     
@@ -44,8 +45,12 @@ class CatalogScreenViewController: BaseViewController, UICollectionViewDataSourc
         // swiftlint:enable force_cast
         let product = catalog[indexPath.row]
         cell.productName.text = product.productName
-        cell.productPrice.text = "\(product.price) P"
+        cell.productPrice.text = "\(product.price) \u{20BD}"
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.openProductScreen(productId: catalog[indexPath.row].productId)
     }
 }
 

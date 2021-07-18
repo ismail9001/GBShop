@@ -29,9 +29,8 @@ class RegistrationScreenInteractor: RegistrationScreenInteractorProtocol {
                               creditCard: newUser.creditCard,
                               bio: newUser.bio) { response in
             switch response.result {
-            case .success:
-            // TODO сделать на беке отправку юзера
-                self.presenter.openProfileScreen(of: newUser)
+            case .success(let result):
+                self.presenter.checkServerResult(with: result)
             case .failure(let error):
                 print(String(describing: error))
                 print(error.localizedDescription)

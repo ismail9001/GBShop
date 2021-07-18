@@ -9,6 +9,7 @@ import  UIKit
 
 protocol CatalogScreenPresenterProtocol: class {
     func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping ([ProductShortResult]) -> Void)
+    func openProductScreen(productId: Int)
 }
 
 class CatalogScreenPresenter: CatalogScreenPresenterProtocol {
@@ -29,5 +30,9 @@ class CatalogScreenPresenter: CatalogScreenPresenterProtocol {
                 completion(catalog)
             }
         }
+    }
+    
+    func openProductScreen(productId: Int) {
+        router.openProductScreen(productId: productId)
     }
 }

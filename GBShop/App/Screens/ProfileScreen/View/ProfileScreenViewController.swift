@@ -16,7 +16,7 @@ protocol ProfileScreenViewControllerProtocol: class {
 class ProfileScreenViewController: BaseViewController, ProfileScreenViewControllerProtocol {
 
     var presenter: ProfileScreenPresenterProtocol!
-    var user: UserData!
+    var user: User!
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -31,7 +31,7 @@ class ProfileScreenViewController: BaseViewController, ProfileScreenViewControll
     }
 
     func setupViews() {
-        loginTextField.text = user.username
+        loginTextField.text = user.login
         passwordTextField.text = user.password
         emailTextField.text = user.email
         cardTextField.text = user.creditCard

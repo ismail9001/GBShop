@@ -7,5 +7,12 @@
 
 struct LoginResult: Codable {
     let result: Int
-    let user: User
+    let errorMessage: String?
+    let user: User?
+    
+    enum CodingKeys: String, CodingKey {
+        case result = "result"
+        case errorMessage = "error_message"
+        case user = "user"
+    }
 }

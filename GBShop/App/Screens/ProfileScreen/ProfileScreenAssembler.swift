@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileScreenAssembler {
-    func assemble(user: UserData) -> ProfileScreenViewController {
+    func assemble(user: User) -> ProfileScreenViewController {
         let storyboard = UIStoryboard(name: "ProfileScreen", bundle: Bundle.main)
         // swiftlint:disable force_cast
         let viewController = storyboard.instantiateViewController(withIdentifier: "ProfileScreenViewController") as! ProfileScreenViewController

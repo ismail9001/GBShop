@@ -8,19 +8,18 @@
 import UIKit
 
 protocol RegistrationScreenRouterProtocol: class {
-    func openProfileScreen(of user: UserData)
+    func openProfileScreen(of user: User)
     func openLoginScreen()
 }
 
 class RegistrationScreenRouter: RegistrationScreenRouterProtocol {
-
     weak var viewController: RegistrationScreenViewController!
 
     init(viewController: RegistrationScreenViewController) {
         self.viewController = viewController
     }
 
-    func openProfileScreen(of user: UserData) {
+    func openProfileScreen(of user: User) {
         DispatchQueue.main.async {
             let viewController = ProfileScreenAssembler().assemble(user: user)
             self.viewController.show(viewController, sender: nil)
