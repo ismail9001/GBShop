@@ -22,8 +22,8 @@ class RegistrationScreenRouter: RegistrationScreenRouterProtocol {
 
     func openProfileScreen(of user: UserData) {
         DispatchQueue.main.async {
-            let vc = ProfileScreenAssembler().assemble(user: user)
-            self.viewController.show(vc, sender: nil)
+            let viewController = ProfileScreenAssembler().assemble(user: user)
+            self.viewController.show(viewController, sender: nil)
         }
     }
 
