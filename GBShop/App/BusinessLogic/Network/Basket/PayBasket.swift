@@ -12,7 +12,7 @@ class PayBasket: AbstractRequestFactory {
     let sessionManager: Session
     let queue: DispatchQueue
     let baseUrl = Config.url
-    
+
     init(
         errorParser: AbstractErrorParser,
         sessionManager: Session,

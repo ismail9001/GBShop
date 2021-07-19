@@ -9,7 +9,7 @@ struct PayBasketResult: Codable {
     let result: Int
     let balance: Int?
     let errorMessage: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case result = "result"
         case balance = "balance"
