@@ -5,7 +5,7 @@
 //  Created by macbook on 14.07.2021.
 //
 
-protocol CatalogScreenRouterProtocol: class {
+protocol CatalogScreenRouterProtocol: AnyObject {
     func openProductScreen(productId: Int)
 }
 

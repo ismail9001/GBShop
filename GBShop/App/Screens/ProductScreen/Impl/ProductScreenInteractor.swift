@@ -5,13 +5,13 @@
 //  Created by macbook on 17.07.2021.
 //
 
-protocol ProductScreenInteractorProtocol: class {
+protocol ProductScreenInteractorProtocol: AnyObject {
     func getProductById(productId: Int, completion: @escaping (ProductDetailResult) -> Void)
 }
 
 class ProductScreenInteractor: ProductScreenInteractorProtocol {
     
-    weak var presenter: ProductScreenPresenterProtocol!
+    weak var presenter: ProductScreenPresenterProtocol?
     let requestFactory = RequestFactory()
 
     required init(presenter: ProductScreenPresenterProtocol) {

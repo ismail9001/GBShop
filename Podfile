@@ -5,6 +5,10 @@ target 'GBShop' do
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'Alamofire', '~> 5.4'
   pod 'SnapKit', '~> 5.0.0'
+  pod 'MaterialComponents/TextControls+OutlinedTextFields'
+  pod 'MaterialComponents/TextControls+OutlinedTextAreas'
+  pod 'MaterialComponents/Buttons'
+  pod 'MaterialComponents/Buttons+Theming'
   pod "SkeletonView"
   use_frameworks!
 

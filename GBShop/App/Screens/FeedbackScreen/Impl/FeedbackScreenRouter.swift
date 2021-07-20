@@ -5,7 +5,7 @@
 //  Created by macbook on 18.07.2021.
 //
 
-protocol FeedbackScreenRouterProtocol: class {
+protocol FeedbackScreenRouterProtocol: AnyObject {
 }
 
 class FeedbackScreenRouter: FeedbackScreenRouterProtocol {

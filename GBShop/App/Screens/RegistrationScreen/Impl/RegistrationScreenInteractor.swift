@@ -5,13 +5,13 @@
 //  Created by macbook on 11.07.2021.
 //
 
-protocol RegistrationScreenInteractorProtocol: class {
+protocol RegistrationScreenInteractorProtocol: AnyObject {
     func register(newUser: UserData)
 }
 
 class RegistrationScreenInteractor: RegistrationScreenInteractorProtocol {
 
-    weak var presenter: RegistrationScreenPresenterProtocol!
+    weak var presenter: RegistrationScreenPresenterProtocol?
     let requestFactory = RequestFactory()
 
     required init(presenter: RegistrationScreenPresenterProtocol) {
@@ -30,7 +30,7 @@ class RegistrationScreenInteractor: RegistrationScreenInteractorProtocol {
                               bio: newUser.bio) { response in
             switch response.result {
             case .success(let result):
-                self.presenter.checkServerResult(with: result)
+                self.presenter?.checkServerResult(with: result)
             case .failure(let error):
                 print(String(describing: error))
                 print(error.localizedDescription)

@@ -10,9 +10,8 @@ import UIKit
 class CatalogScreenAssembler {
     func assemble() -> CatalogScreenViewController {
         let storyboard = UIStoryboard(name: "CatalogScreen", bundle: Bundle.main)
-        // swiftlint:disable force_cast
-        let viewController = storyboard.instantiateViewController(withIdentifier: "CatalogScreenViewController") as! CatalogScreenViewController
-        // swiftlint:enable force_cast
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "CatalogScreenViewController")
+                as? CatalogScreenViewController else { return CatalogScreenViewController() }
 
         let presenter = CatalogScreenPresenter(view: viewController)
         let interactor = CatalogScreenInteractor(presenter: presenter)

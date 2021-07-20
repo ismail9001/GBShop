@@ -9,12 +9,12 @@ import UIKit
 import SnapKit
 import SkeletonView
 
-protocol ProductScreenViewControllerProtocol: class {
+protocol ProductScreenViewControllerProtocol: AnyObject {
 }
 
 class ProductScreenViewController: BaseViewController, ProductScreenViewControllerProtocol {
     
-    var presenter: ProductScreenPresenterProtocol!
+    var presenter: ProductScreenPresenterProtocol?
     var productId: Int!
     let screenInset: CGFloat = 20
     let mainImageHeight: CGFloat = 250
@@ -57,7 +57,7 @@ class ProductScreenViewController: BaseViewController, ProductScreenViewControll
             make.centerY.equalToSuperview()
             make.width.height.equalTo(150)
         }
-        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(feedbackButtonPressed), for: .touchUpInside)
         let bottomLineView = UIView()
         bottomLineView.backgroundColor = .gray
         button.addSubview(bottomLineView)
@@ -90,7 +90,7 @@ class ProductScreenViewController: BaseViewController, ProductScreenViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
-        presenter.getProductById(productId: productId) { [self] product in
+        presenter?.getProductById(productId: productId) { [self] product in
             print(product)
             title = product.productName
             productDescriptionLabel.text = "Описание: \(product.description)"
@@ -128,7 +128,7 @@ class ProductScreenViewController: BaseViewController, ProductScreenViewControll
         }
     }
     
-    @objc func pressed() {
-        presenter.openFeedbackScreen()
+    @objc func feedbackButtonPressed() {
+        presenter?.openFeedbackScreen()
     }
 }

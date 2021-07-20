@@ -7,30 +7,35 @@
 
 import  UIKit
 
-protocol ProfileScreenPresenterProtocol: class {
+protocol ProfileScreenPresenterProtocol: AnyObject {
     func updateUser(updatedUser: UserData)
+    func openLoginScreen()
     func showAlert(value: String, title: String)
 }
 
 class ProfileScreenPresenter: ProfileScreenPresenterProtocol {
 
-    weak var view: ProfileScreenViewControllerProtocol!
-    var router: ProfileScreenRouterProtocol!
-    var interactor: ProfileScreenInteractorProtocol!
+    weak var view: ProfileScreenViewControllerProtocol?
+    var router: ProfileScreenRouterProtocol?
+    var interactor: ProfileScreenInteractorProtocol?
 
     required init(view: ProfileScreenViewControllerProtocol) {
         self.view = view
     }
 
     func updateUser(updatedUser: UserData) {
-        view.showActivityIndicator()
-        interactor.updateUser(updatedUser: updatedUser)
+        view?.showActivityIndicator()
+        interactor?.updateUser(updatedUser: updatedUser)
     }
 
     func showAlert(value: String, title: String) {
         DispatchQueue.main.async { [self] in
-            view.hideActivityIndicator()
-            view.showAlert(value: value, title: title)
+            view?.hideActivityIndicator()
+            view?.showAlert(value: value, title: title)
         }
+    }
+    
+    func openLoginScreen() {
+        router?.openLoginScreen()
     }
 }

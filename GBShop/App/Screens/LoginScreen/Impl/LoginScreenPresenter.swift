@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol LoginScreenPresenterProtocol: class {
+protocol LoginScreenPresenterProtocol: AnyObject {
     func checkServerResult(with result: LoginResult)
     func sentData(login: String, password: String)
     func openRegisterScreen()
@@ -15,17 +15,17 @@ protocol LoginScreenPresenterProtocol: class {
 
 class LoginScreenPresenter: LoginScreenPresenterProtocol {
 
-    weak var view: LoginScreenViewControllerProtocol!
-    var router: LoginScreenRouterProtocol!
-    var interactor: LoginScreenInteractorProtocol!
+    weak var view: LoginScreenViewControllerProtocol?
+    var router: LoginScreenRouterProtocol?
+    var interactor: LoginScreenInteractorProtocol?
 
     required init(view: LoginScreenViewControllerProtocol) {
         self.view = view
     }
 
     func sentData(login: String, password: String) {
-        view.showActivityIndicator()
-        interactor.login(login: login, password: password)
+        view?.showActivityIndicator()
+        interactor?.login(login: login, password: password)
     }
 
     func checkServerResult(with result: LoginResult) {
@@ -37,13 +37,13 @@ class LoginScreenPresenter: LoginScreenPresenterProtocol {
                     window.rootViewController = viewController
                     window.makeKeyAndVisible()
             } else if result.result == 0, let errorMessage = result.errorMessage {
-                view.hideActivityIndicator()
-                view.showAlert(value: errorMessage, title: "Ошибка")
+                view?.hideActivityIndicator()
+                view?.showAlert(value: errorMessage, title: "Ошибка")
             }
         }
     }
 
     func openRegisterScreen() {
-        router.openRegisterScreen()
+        router?.openRegisterScreen()
     }
 }

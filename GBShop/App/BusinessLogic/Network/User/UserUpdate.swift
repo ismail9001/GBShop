@@ -32,7 +32,14 @@ extension UserUpdate: UserUpdateRequestFactory {
                     creditCard: String,
                     bio: String,
                     completionHandler: @escaping (AFDataResponse<UserUpdateResult>) -> Void) {
-        let requestModel = UpdatedUser(baseUrl: baseUrl, userId: userId, login: username, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+        let requestModel = UpdatedUser(baseUrl: baseUrl,
+                                       userId: userId,
+                                       login: username,
+                                       password: password,
+                                       email: email,
+                                       gender: gender,
+                                       creditCard: creditCard,
+                                       bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }

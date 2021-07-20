@@ -5,13 +5,13 @@
 //  Created by macbook on 11.07.2021.
 //
 
-protocol LoginScreenInteractorProtocol: class {
+protocol LoginScreenInteractorProtocol: AnyObject {
     func login(login: String, password: String)
 }
 
 class LoginScreenInteractor: LoginScreenInteractorProtocol {
 
-    weak var presenter: LoginScreenPresenterProtocol!
+    weak var presenter: LoginScreenPresenterProtocol?
     let requestFactory = RequestFactory()
 
     required init(presenter: LoginScreenPresenterProtocol) {
@@ -24,7 +24,7 @@ class LoginScreenInteractor: LoginScreenInteractorProtocol {
         auth.login(userName: login, password: password) { response in
             switch response.result {
             case .success(let result):
-                self.presenter.checkServerResult(with: result)
+                self.presenter?.checkServerResult(with: result)
             case .failure(let error):
                 print(String(describing: error))
                 print(error.localizedDescription)

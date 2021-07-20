@@ -7,22 +7,22 @@
 
 import  UIKit
 
-protocol FeedbackScreenPresenterProtocol: class {
+protocol FeedbackScreenPresenterProtocol: AnyObject {
     func getFeedbacks(completion: @escaping ([FeedBackResult]) -> Void)
 }
 
 class FeedbackScreenPresenter: FeedbackScreenPresenterProtocol {
     
-    weak var view: FeedbackScreenViewControllerProtocol!
-    var router: FeedbackScreenRouterProtocol!
-    var interactor: FeedbackScreenInteractorProtocol!
+    weak var view: FeedbackScreenViewControllerProtocol?
+    var router: FeedbackScreenRouterProtocol?
+    var interactor: FeedbackScreenInteractorProtocol?
     
     required init(view: FeedbackScreenViewControllerProtocol) {
         self.view = view
     }
     
     func getFeedbacks(completion: @escaping ([FeedBackResult]) -> Void) {
-        interactor.getFeedbacks() { feedbacks in
+        interactor?.getFeedbacks { feedbacks in
             DispatchQueue.main.async {
                 completion(feedbacks)
             }

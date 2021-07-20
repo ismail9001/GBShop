@@ -10,9 +10,8 @@ import UIKit
 class FeedbackScreenAssembler {
     func assemble() -> FeedbackScreenViewController {
         let storyboard = UIStoryboard(name: "FeedbackScreen", bundle: Bundle.main)
-        // swiftlint:disable force_cast
-        let viewController = storyboard.instantiateViewController(withIdentifier: "FeedbackScreenViewController") as! FeedbackScreenViewController
-        // swiftlint:enable force_cast
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "FeedbackScreenViewController")
+                as? FeedbackScreenViewController else { return FeedbackScreenViewController() }
 
         let presenter = FeedbackScreenPresenter(view: viewController)
         let interactor = FeedbackScreenInteractor(presenter: presenter)

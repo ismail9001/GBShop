@@ -32,7 +32,14 @@ extension Registration: RegistrationRequestFactory {
                   creditCard bio: String,
                   bio password: String,
                   completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
-        let requestModel = Registrator(baseUrl: baseUrl, userId: userId, login: username, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+        let requestModel = Registrator(baseUrl: baseUrl,
+                                       userId: userId,
+                                       login: username,
+                                       password: password,
+                                       email: email,
+                                       gender: gender,
+                                       creditCard: creditCard,
+                                       bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }

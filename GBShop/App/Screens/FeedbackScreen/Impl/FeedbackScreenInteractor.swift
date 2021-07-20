@@ -5,13 +5,13 @@
 //  Created by macbook on 18.07.2021.
 //
 
-protocol FeedbackScreenInteractorProtocol: class {
+protocol FeedbackScreenInteractorProtocol: AnyObject {
     func getFeedbacks(completion: @escaping ([FeedBackResult]) -> Void)
 }
 
 class FeedbackScreenInteractor: FeedbackScreenInteractorProtocol {
     
-    weak var presenter: FeedbackScreenPresenterProtocol!
+    weak var presenter: FeedbackScreenPresenterProtocol?
     let requestFactory = RequestFactory()
 
     required init(presenter: FeedbackScreenPresenterProtocol) {

@@ -5,7 +5,7 @@
 //  Created by macbook on 17.07.2021.
 //
 
-protocol ProductScreenRouterProtocol: class {
+protocol ProductScreenRouterProtocol: AnyObject {
     func openFeedBackScreen()
 }
 

@@ -24,7 +24,9 @@ class GetFeedbacksInfo: AbstractRequestFactory {
 }
 
 extension GetFeedbacksInfo: GetFeedbacksRequestFactory {
-    func getFeedbacks(pageNumber: Int, productId: Int, completionHandler: @escaping (AFDataResponse<GetFeedbacksResult>) -> Void) {
+    func getFeedbacks(pageNumber: Int,
+                      productId: Int,
+                      completionHandler: @escaping (AFDataResponse<GetFeedbacksResult>) -> Void) {
         let requestModel = GetFeedbacksData(baseUrl: baseUrl, pageNumber: pageNumber, productId: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

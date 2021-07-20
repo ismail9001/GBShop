@@ -6,7 +6,7 @@ excluded:
 disabled_rules:
 - trailing_whitespace
 
-line_length: 200
+line_length: 120
 type_body_length:
   warning: 300
   error: 400

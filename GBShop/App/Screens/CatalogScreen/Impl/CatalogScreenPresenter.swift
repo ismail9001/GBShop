@@ -7,32 +7,32 @@
 
 import  UIKit
 
-protocol CatalogScreenPresenterProtocol: class {
+protocol CatalogScreenPresenterProtocol: AnyObject {
     func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping ([ProductShortResult]) -> Void)
     func openProductScreen(productId: Int)
 }
 
 class CatalogScreenPresenter: CatalogScreenPresenterProtocol {
     
-    weak var view: CatalogScreenViewControllerProtocol!
-    var router: CatalogScreenRouterProtocol!
-    var interactor: CatalogScreenInteractorProtocol!
+    weak var view: CatalogScreenViewControllerProtocol?
+    var router: CatalogScreenRouterProtocol?
+    var interactor: CatalogScreenInteractorProtocol?
     
     required init(view: CatalogScreenViewControllerProtocol) {
         self.view = view
     }
     
     func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping ([ProductShortResult]) -> Void) {
-        view.showActivityIndicator()
-        self.interactor.getCatalog(pageNumber: pageNumber, categoryId: categoryId) { catalog in
+        view?.showActivityIndicator()
+        interactor?.getCatalog(pageNumber: pageNumber, categoryId: categoryId) { catalog in
             DispatchQueue.main.async {
-                self.view.hideActivityIndicator()
+                self.view?.hideActivityIndicator()
                 completion(catalog)
             }
         }
     }
     
     func openProductScreen(productId: Int) {
-        router.openProductScreen(productId: productId)
+        router?.openProductScreen(productId: productId)
     }
 }

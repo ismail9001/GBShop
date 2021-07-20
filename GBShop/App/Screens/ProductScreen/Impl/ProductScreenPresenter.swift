@@ -7,23 +7,23 @@
 
 import  UIKit
 
-protocol ProductScreenPresenterProtocol: class {
+protocol ProductScreenPresenterProtocol: AnyObject {
     func getProductById(productId: Int, completion: @escaping (ProductDetailResult) -> Void)
     func openFeedbackScreen()
 }
 
 class ProductScreenPresenter: ProductScreenPresenterProtocol {
     
-    weak var view: ProductScreenViewControllerProtocol!
-    var router: ProductScreenRouterProtocol!
-    var interactor: ProductScreenInteractorProtocol!
+    weak var view: ProductScreenViewControllerProtocol?
+    var router: ProductScreenRouterProtocol?
+    var interactor: ProductScreenInteractorProtocol?
     
     required init(view: ProductScreenViewControllerProtocol) {
         self.view = view
     }
     
     func getProductById(productId: Int, completion: @escaping (ProductDetailResult) -> Void) {
-        interactor.getProductById(productId: productId) { product in
+        interactor?.getProductById(productId: productId) { product in
             DispatchQueue.main.async {
                 completion(product)
             }
@@ -31,6 +31,6 @@ class ProductScreenPresenter: ProductScreenPresenterProtocol {
     }
     
     func openFeedbackScreen() {
-        router.openFeedBackScreen()
+        router?.openFeedBackScreen()
     }
 }

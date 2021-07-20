@@ -7,14 +7,16 @@
 
 import UIKit
 
-protocol FeedbackScreenViewControllerProtocol: class {
+protocol FeedbackScreenViewControllerProtocol: AnyObject {
 }
 
-class FeedbackScreenViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, FeedbackScreenViewControllerProtocol {
+class FeedbackScreenViewController: BaseViewController,
+                                    UITableViewDelegate,
+                                    UITableViewDataSource,
+                                    FeedbackScreenViewControllerProtocol {
 
-    var presenter: FeedbackScreenPresenterProtocol!
+    var presenter: FeedbackScreenPresenterProtocol?
     var feedbacks: [FeedBackResult] = []
-    private let myArray: NSArray = ["First", "Second", "Third"]
     lazy var feedbackTable: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
@@ -30,7 +32,7 @@ class FeedbackScreenViewController: BaseViewController, UITableViewDelegate, UIT
         feedbackTable.snp.makeConstraints { (make) in
             make.edges.equalTo(view.safeAreaLayoutGuide.snp.edges)
         }
-        presenter.getFeedbacks() { [self] feedbacks in
+        presenter?.getFeedbacks { [self] feedbacks in
             self.feedbacks = feedbacks
             feedbackTable.reloadData()
         }
