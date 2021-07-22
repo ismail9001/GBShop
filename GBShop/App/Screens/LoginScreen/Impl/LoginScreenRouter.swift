@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol LoginScreenRouterProtocol: class {
+protocol LoginScreenRouterProtocol: AnyObject {
     func openProfileScreen(of user: UserData)
     func openRegisterScreen()
 }

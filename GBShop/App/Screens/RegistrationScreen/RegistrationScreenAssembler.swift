@@ -10,9 +10,9 @@ import UIKit
 class RegistrationScreenAssembler {
     func assemble() -> RegistrationScreenViewController {
         let storyboard = UIStoryboard(name: "RegistrationScreen", bundle: Bundle.main)
-        // swiftlint:disable force_cast
-        let viewController = storyboard.instantiateViewController(withIdentifier: "RegistrationScreenViewController") as! RegistrationScreenViewController
-        // swiftlint:enable force_cast
+        guard let viewController = storyboard.instantiateViewController(
+                withIdentifier: "RegistrationScreenViewController") as?
+                RegistrationScreenViewController else { return RegistrationScreenViewController() }
 
         let presenter = RegistrationScreenPresenter(view: viewController)
         let interactor = RegistrationScreenInteractor(presenter: presenter)

@@ -17,14 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Каталог" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hQ-7S-FRN">
-                                <rect key="frame" x="167" y="64" width="80.5" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.14688208699999999" green="0.18433943389999999" blue="0.23787593839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-6N-TFd">
-                                <rect key="frame" x="0.0" y="110.5" width="414" height="751.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bbc-Qt-7eL">
                                     <size key="itemSize" width="210" height="207"/>
@@ -78,11 +72,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sV0-44-vLN" firstAttribute="trailing" secondItem="nAm-6N-TFd" secondAttribute="trailing" id="8p1-LE-ds9"/>
-                            <constraint firstItem="9hQ-7S-FRN" firstAttribute="centerX" secondItem="uax-FT-Iao" secondAttribute="centerX" id="V2c-NN-x9v"/>
+                            <constraint firstItem="nAm-6N-TFd" firstAttribute="top" secondItem="sV0-44-vLN" secondAttribute="top" id="bmD-R7-mtS"/>
                             <constraint firstItem="sV0-44-vLN" firstAttribute="bottom" secondItem="nAm-6N-TFd" secondAttribute="bottom" id="c7J-zk-C8n"/>
-                            <constraint firstItem="9hQ-7S-FRN" firstAttribute="top" secondItem="sV0-44-vLN" secondAttribute="top" constant="20" id="iah-dG-Hut"/>
                             <constraint firstItem="nAm-6N-TFd" firstAttribute="leading" secondItem="sV0-44-vLN" secondAttribute="leading" id="nwP-e4-0RQ"/>
-                            <constraint firstItem="nAm-6N-TFd" firstAttribute="top" secondItem="9hQ-7S-FRN" secondAttribute="bottom" constant="20" id="vOu-Lm-agk"/>
                         </constraints>
                     </view>
                     <connections>

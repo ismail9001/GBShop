@@ -5,7 +5,8 @@
 //  Created by macbook on 14.07.2021.
 //
 
-protocol CatalogScreenRouterProtocol: class {
+protocol CatalogScreenRouterProtocol: AnyObject {
+    func openProductScreen(productId: Int)
 }
 
 class CatalogScreenRouter: CatalogScreenRouterProtocol {
@@ -14,5 +15,10 @@ class CatalogScreenRouter: CatalogScreenRouterProtocol {
 
     init(viewController: CatalogScreenViewController) {
         self.viewController = viewController
+    }
+    
+    func openProductScreen(productId: Int) {
+        let viewController = ProductScreenAssembler().assemble(productId: productId)
+        self.viewController.show(viewController, sender: nil)
     }
 }

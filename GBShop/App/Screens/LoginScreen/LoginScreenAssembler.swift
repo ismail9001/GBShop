@@ -10,9 +10,8 @@ import UIKit
 class LoginScreenAssembler {
     func assemble() -> LoginScreenViewController {
         let storyboard = UIStoryboard(name: "LoginScreen", bundle: Bundle.main)
-        // swiftlint:disable force_cast
-        let viewController = storyboard.instantiateViewController(withIdentifier: "LoginScreenViewController") as! LoginScreenViewController
-        // swiftlint:enable force_cast
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "LoginScreenViewController") as?
+                LoginScreenViewController else { return LoginScreenViewController() }
 
         let presenter = LoginScreenPresenter(view: viewController)
         let interactor = LoginScreenInteractor(presenter: presenter)

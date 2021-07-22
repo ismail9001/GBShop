@@ -5,13 +5,13 @@
 //  Created by macbook on 11.07.2021.
 //
 
-protocol ProfileScreenInteractorProtocol: class {
+protocol ProfileScreenInteractorProtocol: AnyObject {
     func updateUser(updatedUser: UserData)
 }
 
 class ProfileScreenInteractor: ProfileScreenInteractorProtocol {
 
-    weak var presenter: ProfileScreenPresenterProtocol!
+    weak var presenter: ProfileScreenPresenterProtocol?
     let requestFactory = RequestFactory()
 
     required init(presenter: ProfileScreenPresenterProtocol) {
@@ -30,7 +30,7 @@ class ProfileScreenInteractor: ProfileScreenInteractorProtocol {
                               bio: updatedUser.bio) { response in
             switch response.result {
             case .success:
-                self.presenter.showAlert(value: "Данные успешно обновлены", title: "Внимание")
+                self.presenter?.showAlert(value: "Данные успешно обновлены", title: "Внимание")
             case .failure(let error):
                 print(String(describing: error))
                 print(error.localizedDescription)

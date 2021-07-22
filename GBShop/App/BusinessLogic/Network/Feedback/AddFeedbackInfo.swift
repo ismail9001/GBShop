@@ -24,7 +24,9 @@ class AddFeedbackInfo: AbstractRequestFactory {
 }
 
 extension AddFeedbackInfo: AddFeedbackRequestFactory {
-    func addFeedback(userId: Int, feedbackText: String, completionHandler: @escaping (AFDataResponse<AddFeedbackResult>) -> Void) {
+    func addFeedback(userId: Int,
+                     feedbackText: String,
+                     completionHandler: @escaping (AFDataResponse<AddFeedbackResult>) -> Void) {
         let requestModel = AddFeedbackData(baseUrl: baseUrl, userId: userId, feedbackText: feedbackText)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

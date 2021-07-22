@@ -5,13 +5,13 @@
 //  Created by macbook on 14.07.2021.
 //
 
-protocol CatalogScreenInteractorProtocol: class {
+protocol CatalogScreenInteractorProtocol: AnyObject {
     func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping ([ProductShortResult]) -> Void)
 }
 
 class CatalogScreenInteractor: CatalogScreenInteractorProtocol {
 
-    weak var presenter: CatalogScreenPresenterProtocol!
+    weak var presenter: CatalogScreenPresenterProtocol?
     let requestFactory = RequestFactory()
 
     required init(presenter: CatalogScreenPresenterProtocol) {

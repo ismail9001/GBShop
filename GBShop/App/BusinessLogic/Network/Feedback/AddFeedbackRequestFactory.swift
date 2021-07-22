@@ -9,5 +9,7 @@ import Foundation
 import Alamofire
 
 protocol AddFeedbackRequestFactory {
-    func addFeedback(userId: Int, feedbackText: String, completionHandler: @escaping (AFDataResponse<AddFeedbackResult>) -> Void)
+    func addFeedback(userId: Int,
+                     feedbackText: String,
+                     completionHandler: @escaping (AFDataResponse<AddFeedbackResult>) -> Void)
 }

@@ -10,6 +10,19 @@
 		23F13501A450B588FDADF601 /* Pods_GBShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5913A403C7DC942FEE2754EC /* Pods_GBShopTests.framework */; };
 		2A80A41E5C6D6E4983C5A6EF /* Pods_GBShop_GBShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6A95A979E171A7C841328F /* Pods_GBShop_GBShopUITests.framework */; };
 		4599BAC5E03C3EBCCDF21D14 /* Pods_GBShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1A645066655E09ECB34B56 /* Pods_GBShop.framework */; };
+		FA04C95526A34007007DCCE3 /* ProductScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C95426A34007007DCCE3 /* ProductScreenAssembler.swift */; };
+		FA04C95E26A34059007DCCE3 /* ProductScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C95D26A34059007DCCE3 /* ProductScreenViewController.swift */; };
+		FA04C96626A3406B007DCCE3 /* ProductScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA04C96526A3406B007DCCE3 /* ProductScreen.storyboard */; };
+		FA04C96C26A340D0007DCCE3 /* ProductScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C96B26A340D0007DCCE3 /* ProductScreenPresenter.swift */; };
+		FA04C97126A3414C007DCCE3 /* ProductScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C97026A3414C007DCCE3 /* ProductScreenRouter.swift */; };
+		FA04C97626A341A8007DCCE3 /* ProductScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C97526A341A8007DCCE3 /* ProductScreenInteractor.swift */; };
+		FA04C99826A4107D007DCCE3 /* FeedbackScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C99726A4107D007DCCE3 /* FeedbackScreenAssembler.swift */; };
+		FA04C9A126A41103007DCCE3 /* FeedBackScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C9A026A41103007DCCE3 /* FeedBackScreenViewController.swift */; };
+		FA04C9A926A4113F007DCCE3 /* FeedbackScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA04C9A826A4113F007DCCE3 /* FeedbackScreen.storyboard */; };
+		FA04C9AF26A41197007DCCE3 /* FeedbackScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C9AE26A41197007DCCE3 /* FeedbackScreenPresenter.swift */; };
+		FA04C9B726A41233007DCCE3 /* FeedbackScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C9B626A41233007DCCE3 /* FeedbackScreenRouter.swift */; };
+		FA04C9BC26A41262007DCCE3 /* FeedbackScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C9BB26A41262007DCCE3 /* FeedbackScreenInteractor.swift */; };
+		FA04C9CA26A43679007DCCE3 /* MainTabBarControllerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C9C926A43679007DCCE3 /* MainTabBarControllerAssembler.swift */; };
 		FA09872A269F675B005925E7 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098729269F675B005925E7 /* MainTabBarViewController.swift */; };
 		FA098737269F78BE005925E7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098736269F78BE005925E7 /* UIApplicationExtension.swift */; };
 		FA09873D269F79E8005925E7 /* CatalogScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09873C269F79E8005925E7 /* CatalogScreenAssembler.swift */; };
@@ -122,6 +135,19 @@
 		D9370A83FE03ED936C9FEBD9 /* Pods-GBShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop.release.xcconfig"; path = "Target Support Files/Pods-GBShop/Pods-GBShop.release.xcconfig"; sourceTree = "<group>"; };
 		E7A3D452746A815137DE3F21 /* Pods-GBShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopTests.debug.xcconfig"; path = "Target Support Files/Pods-GBShopTests/Pods-GBShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6AE00D07B0383A8C63BD51E /* Pods-GBShop-GBShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop-GBShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-GBShop-GBShopUITests/Pods-GBShop-GBShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA04C95426A34007007DCCE3 /* ProductScreenAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreenAssembler.swift; sourceTree = "<group>"; };
+		FA04C95D26A34059007DCCE3 /* ProductScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreenViewController.swift; sourceTree = "<group>"; };
+		FA04C96526A3406B007DCCE3 /* ProductScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductScreen.storyboard; sourceTree = "<group>"; };
+		FA04C96B26A340D0007DCCE3 /* ProductScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreenPresenter.swift; sourceTree = "<group>"; };
+		FA04C97026A3414C007DCCE3 /* ProductScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreenRouter.swift; sourceTree = "<group>"; };
+		FA04C97526A341A8007DCCE3 /* ProductScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreenInteractor.swift; sourceTree = "<group>"; };
+		FA04C99726A4107D007DCCE3 /* FeedbackScreenAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackScreenAssembler.swift; sourceTree = "<group>"; };
+		FA04C9A026A41103007DCCE3 /* FeedBackScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackScreenViewController.swift; sourceTree = "<group>"; };
+		FA04C9A826A4113F007DCCE3 /* FeedbackScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedbackScreen.storyboard; sourceTree = "<group>"; };
+		FA04C9AE26A41197007DCCE3 /* FeedbackScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackScreenPresenter.swift; sourceTree = "<group>"; };
+		FA04C9B626A41233007DCCE3 /* FeedbackScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackScreenRouter.swift; sourceTree = "<group>"; };
+		FA04C9BB26A41262007DCCE3 /* FeedbackScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackScreenInteractor.swift; sourceTree = "<group>"; };
+		FA04C9C926A43679007DCCE3 /* MainTabBarControllerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerAssembler.swift; sourceTree = "<group>"; };
 		FA098729269F675B005925E7 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		FA098736269F78BE005925E7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		FA09873C269F79E8005925E7 /* CatalogScreenAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenAssembler.swift; sourceTree = "<group>"; };
@@ -267,6 +293,73 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA04C95326A33FEF007DCCE3 /* ProductScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA04C96A26A340BD007DCCE3 /* Impl */,
+				FA04C95C26A3403B007DCCE3 /* View */,
+				FA04C95426A34007007DCCE3 /* ProductScreenAssembler.swift */,
+			);
+			path = ProductScreen;
+			sourceTree = "<group>";
+		};
+		FA04C95C26A3403B007DCCE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA04C95D26A34059007DCCE3 /* ProductScreenViewController.swift */,
+				FA04C96526A3406B007DCCE3 /* ProductScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA04C96A26A340BD007DCCE3 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				FA04C96B26A340D0007DCCE3 /* ProductScreenPresenter.swift */,
+				FA04C97026A3414C007DCCE3 /* ProductScreenRouter.swift */,
+				FA04C97526A341A8007DCCE3 /* ProductScreenInteractor.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		FA04C99626A4105E007DCCE3 /* FeedbackScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA04C9AD26A41185007DCCE3 /* Impl */,
+				FA04C99F26A410E1007DCCE3 /* View */,
+				FA04C99726A4107D007DCCE3 /* FeedbackScreenAssembler.swift */,
+			);
+			path = FeedbackScreen;
+			sourceTree = "<group>";
+		};
+		FA04C99F26A410E1007DCCE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA04C9A026A41103007DCCE3 /* FeedBackScreenViewController.swift */,
+				FA04C9A826A4113F007DCCE3 /* FeedbackScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA04C9AD26A41185007DCCE3 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				FA04C9AE26A41197007DCCE3 /* FeedbackScreenPresenter.swift */,
+				FA04C9B626A41233007DCCE3 /* FeedbackScreenRouter.swift */,
+				FA04C9BB26A41262007DCCE3 /* FeedbackScreenInteractor.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		FA04C9C826A4364C007DCCE3 /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				FA098729269F675B005925E7 /* MainTabBarViewController.swift */,
+				FA04C9C926A43679007DCCE3 /* MainTabBarControllerAssembler.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
 		FA09873B269F79BE005925E7 /* CatalogScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,11 +467,13 @@
 		FA454231269B60C900FF2A5F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FA04C9C826A4364C007DCCE3 /* MainTabBarController */,
+				FA04C99626A4105E007DCCE3 /* FeedbackScreen */,
+				FA04C95326A33FEF007DCCE3 /* ProductScreen */,
 				FA09873B269F79BE005925E7 /* CatalogScreen */,
 				FA4542A1269B860900FF2A5F /* ProfileScreen */,
 				FA454268269B742800FF2A5F /* RegistrationScreen */,
 				FA454232269B60D200FF2A5F /* LoginScreen */,
-				FA098729269F675B005925E7 /* MainTabBarViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -815,7 +910,9 @@
 				FAE5AC49267F887100F070DC /* LaunchScreen.storyboard in Resources */,
 				FA098746269F7A30005925E7 /* CatalogScreen.storyboard in Resources */,
 				FAE5AC46267F887100F070DC /* Assets.xcassets in Resources */,
+				FA04C96626A3406B007DCCE3 /* ProductScreen.storyboard in Resources */,
 				FA45423D269B616D00FF2A5F /* LoginScreen.storyboard in Resources */,
+				FA04C9A926A4113F007DCCE3 /* FeedbackScreen.storyboard in Resources */,
 				FA4542AC269B869A00FF2A5F /* ProfileScreen.storyboard in Resources */,
 				FA454270269B74A400FF2A5F /* RegistrationScreen.storyboard in Resources */,
 			);
@@ -965,12 +1062,15 @@
 				FA454258269B633800FF2A5F /* LoginScreenRouter.swift in Sources */,
 				FA4541A02699884F00FF2A5F /* AddToBasket.swift in Sources */,
 				FAE5ACAD26827BF900F070DC /* AbstractErrorParser.swift in Sources */,
+				FA04C9A126A41103007DCCE3 /* FeedBackScreenViewController.swift in Sources */,
 				FA098757269F7BC3005925E7 /* CatalogScreenPresenter.swift in Sources */,
+				FA04C96C26A340D0007DCCE3 /* ProductScreenPresenter.swift in Sources */,
 				FA45424B269B622500FF2A5F /* LoginScreenInteractor.swift in Sources */,
 				FAE5AD042683BF5E00F070DC /* UserUpdate.swift in Sources */,
 				FA454285269B762E00FF2A5F /* RegistrationScreenRouter.swift in Sources */,
 				FAABE43F2691FC6500D16CA1 /* GetFeedbacksRequestFactory.swift in Sources */,
 				FAE5ACDE2683B13A00F070DC /* Logout.swift in Sources */,
+				FA04C9AF26A41197007DCCE3 /* FeedbackScreenPresenter.swift in Sources */,
 				FA4542BF269B87CF00FF2A5F /* ProfileScreenInteractor.swift in Sources */,
 				FA45427B269B756400FF2A5F /* RegistrationScreenInteractor.swift in Sources */,
 				FAE5AD892687B86B00F070DC /* ProductInfo.swift in Sources */,
@@ -986,20 +1086,25 @@
 				FAABE43A2691FB8600D16CA1 /* DeleteFeedbackResult.swift in Sources */,
 				FA4541C9269991E000FF2A5F /* PayBasket.swift in Sources */,
 				FAE5AD5C2687AED500F070DC /* CatalogDataResult.swift in Sources */,
+				FA04C95E26A34059007DCCE3 /* ProductScreenViewController.swift in Sources */,
 				FAE5AD642687AF2500F070DC /* ProductDetailResult.swift in Sources */,
 				FAABE4222691F8A900D16CA1 /* DeleteFeedBackRequestFactory.swift in Sources */,
 				FA4542A3269B864D00FF2A5F /* ProfileScreenAssembler.swift in Sources */,
 				FAABE4352691F9F200D16CA1 /* DeleteFeedbackInfo.swift in Sources */,
 				FA098737269F78BE005925E7 /* UIApplicationExtension.swift in Sources */,
 				FAABE42D2691F90600D16CA1 /* AddFeedbackResult.swift in Sources */,
+				FA04C9CA26A43679007DCCE3 /* MainTabBarControllerAssembler.swift in Sources */,
 				FAABE4442691FCC700D16CA1 /* GetFeedbacksInfo.swift in Sources */,
 				FA45428C269B7F4F00FF2A5F /* UserData.swift in Sources */,
 				FA4542B1269B86CB00FF2A5F /* ProfileScreenViewController.swift in Sources */,
 				FA454253269B62A500FF2A5F /* LoginScreenPresenter.swift in Sources */,
 				FAE5ACD42683B07900F070DC /* LogoutRequestFactory.swift in Sources */,
+				FA04C9B726A41233007DCCE3 /* FeedbackScreenRouter.swift in Sources */,
 				FA4542B7269B874700FF2A5F /* ProfileScreenPresenter.swift in Sources */,
+				FA04C9BC26A41262007DCCE3 /* FeedbackScreenInteractor.swift in Sources */,
 				FAE5AD6E2687B03300F070DC /* Catalog.swift in Sources */,
 				FAABE44E2691FDFE00D16CA1 /* FeedbackResult.swift in Sources */,
+				FA04C97126A3414C007DCCE3 /* ProductScreenRouter.swift in Sources */,
 				FAE5ACD92683B0FC00F070DC /* LogoutResult.swift in Sources */,
 				FA4541A62699894000FF2A5F /* AddToBasketResult.swift in Sources */,
 				FA09875C269F7C2A005925E7 /* CatalogScreenRouter.swift in Sources */,
@@ -1016,7 +1121,10 @@
 				FAE5AC902682794400F070DC /* AuthRequestFactory.swift in Sources */,
 				FAE5ACB726827CB700F070DC /* CustomDecodableSerializer.swift in Sources */,
 				FA454234269B612E00FF2A5F /* LoginScreenAssembler.swift in Sources */,
+				FA04C99826A4107D007DCCE3 /* FeedbackScreenAssembler.swift in Sources */,
 				FAE5ACB226827C5100F070DC /* ErrorParser.swift in Sources */,
+				FA04C95526A34007007DCCE3 /* ProductScreenAssembler.swift in Sources */,
+				FA04C97626A341A8007DCCE3 /* ProductScreenInteractor.swift in Sources */,
 				FAE5AC3D267F885F00F070DC /* AppDelegate.swift in Sources */,
 				FAE5ACA226827A1C00F070DC /* Auth.swift in Sources */,
 				FA098761269F7C5E005925E7 /* CatalogScreenInteractor.swift in Sources */,
