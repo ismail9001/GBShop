@@ -30,12 +30,9 @@ class RegistrationScreenPresenter: RegistrationScreenPresenterProtocol {
     
     func checkServerResult(with result: RegistrationResult) {
         DispatchQueue.main.async { [self] in
-            if result.result == 1,
-               let window = UIApplication.shared.currentWindow,
-               let user = result.user {
-                let viewController = MainTabBarControllerAssembler().assemble(user: user)
-                    window.rootViewController = viewController
-                    window.makeKeyAndVisible()
+            if result.result == 1, let user = result.user {
+                UserDefaultsWrapper.saveUserInfo(user: user)
+                router?.openCatalogScreen()
             } else if result.result == 0, let errorMessage = result.errorMessage {
                 view?.hideActivityIndicator()
                 view?.showAlert(value: errorMessage, title: "Ошибка")

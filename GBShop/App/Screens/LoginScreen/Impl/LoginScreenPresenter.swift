@@ -33,7 +33,8 @@ class LoginScreenPresenter: LoginScreenPresenterProtocol {
             if result.result == 1,
                let user = result.user,
                let window = UIApplication.shared.currentWindow {
-                let viewController = MainTabBarControllerAssembler().assemble(user: user)
+                UserDefaultsWrapper.saveUserInfo(user: user)
+                let viewController = MainTabBarControllerAssembler().assemble()
                     window.rootViewController = viewController
                     window.makeKeyAndVisible()
             } else if result.result == 0, let errorMessage = result.errorMessage {

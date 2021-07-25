@@ -6,7 +6,7 @@
 //
 
 protocol ProfileScreenInteractorProtocol: AnyObject {
-    func updateUser(updatedUser: UserData)
+    func updateUser(updatedUser: UserData, completion: @escaping (UserData) -> Void)
 }
 
 class ProfileScreenInteractor: ProfileScreenInteractorProtocol {
@@ -17,8 +17,8 @@ class ProfileScreenInteractor: ProfileScreenInteractorProtocol {
     required init(presenter: ProfileScreenPresenterProtocol) {
         self.presenter = presenter
     }
-
-    func updateUser(updatedUser: UserData) {
+    
+    func updateUser(updatedUser: UserData, completion: @escaping (UserData) -> Void) {
         let updateUser = requestFactory.makeUserUpdateRequestFactory()
 
         updateUser.updateUser(userId: 123,
@@ -30,7 +30,7 @@ class ProfileScreenInteractor: ProfileScreenInteractorProtocol {
                               bio: updatedUser.bio) { response in
             switch response.result {
             case .success:
-                self.presenter?.showAlert(value: "Данные успешно обновлены", title: "Внимание")
+                completion(updatedUser)
             case .failure(let error):
                 print(String(describing: error))
                 print(error.localizedDescription)

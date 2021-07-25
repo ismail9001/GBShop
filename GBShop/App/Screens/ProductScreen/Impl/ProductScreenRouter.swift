@@ -11,7 +11,7 @@ protocol ProductScreenRouterProtocol: AnyObject {
 
 class ProductScreenRouter: ProductScreenRouterProtocol {
     
-    weak var viewController: ProductScreenViewController!
+    weak var viewController: ProductScreenViewController?
     
     init(viewController: ProductScreenViewController) {
         self.viewController = viewController
@@ -19,6 +19,6 @@ class ProductScreenRouter: ProductScreenRouterProtocol {
     
     func openFeedBackScreen() {
         let viewController = FeedbackScreenAssembler().assemble()
-        self.viewController.show(viewController, sender: nil)
+        self.viewController?.show(viewController, sender: nil)
     }
 }

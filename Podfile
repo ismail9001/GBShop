@@ -10,6 +10,7 @@ target 'GBShop' do
   pod 'MaterialComponents/Buttons'
   pod 'MaterialComponents/Buttons+Theming'
   pod "SkeletonView"
+  pod 'Kingfisher', '~> 6.0'
   use_frameworks!
 
   # Pods for GBShop

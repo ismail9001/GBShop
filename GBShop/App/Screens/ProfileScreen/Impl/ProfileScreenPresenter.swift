@@ -25,7 +25,25 @@ class ProfileScreenPresenter: ProfileScreenPresenterProtocol {
 
     func updateUser(updatedUser: UserData) {
         view?.showActivityIndicator()
-        interactor?.updateUser(updatedUser: updatedUser)
+        interactor?.updateUser(updatedUser: updatedUser) { [weak self] updatedUser in
+            self?.saveUserInMemory(user: updatedUser)
+            self?.showAlert(value: "Данные успешно обновлены", title: "Внимание")
+        }
+    }
+    
+    func saveUserInMemory(user: UserData) {
+        guard let savedUser = UserDefaultsWrapper.userInfo() else { return }
+        let newUser = User(userId: savedUser.userId,
+                           login: user.username ,
+                           password: user.password,
+                           name: user.username ,
+                           lastname: user.username,
+                           email: user.email,
+                           gender: user.gender,
+                           creditCard: user.creditCard,
+                           bio: user.bio,
+                           basket: nil)
+        UserDefaultsWrapper.saveUserInfo(user: newUser)
     }
 
     func showAlert(value: String, title: String) {
@@ -36,6 +54,7 @@ class ProfileScreenPresenter: ProfileScreenPresenterProtocol {
     }
     
     func openLoginScreen() {
+        UserDefaultsWrapper.deleteUserData()
         router?.openLoginScreen()
     }
 }

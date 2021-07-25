@@ -14,7 +14,7 @@ protocol LoginScreenRouterProtocol: AnyObject {
 
 class LoginScreenRouter: LoginScreenRouterProtocol {
 
-    weak var viewController: LoginScreenViewController!
+    weak var viewController: LoginScreenViewController?
 
     init(viewController: LoginScreenViewController) {
         self.viewController = viewController
@@ -32,6 +32,6 @@ class LoginScreenRouter: LoginScreenRouterProtocol {
 
     func openRegisterScreen() {
         let viewController = RegistrationScreenAssembler().assemble()
-        self.viewController.show(viewController, sender: nil)
+        self.viewController?.show(viewController, sender: nil)
     }
 }

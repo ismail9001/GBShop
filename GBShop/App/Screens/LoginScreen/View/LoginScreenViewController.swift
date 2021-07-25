@@ -20,12 +20,12 @@ protocol LoginScreenViewControllerProtocol: AnyObject {
 class LoginScreenViewController: BaseViewController, LoginScreenViewControllerProtocol {
     var presenter: LoginScreenPresenterProtocol?
     
-    let scrollView = UIScrollView()
-    let logotypeOffset: CGFloat = 100.0
-    let buttonHeight: CGFloat = 60.0
-    let verticalOffset: CGFloat = 20.0
-    let horizontalOffset: CGFloat = 40.0
     let containerScheme = MDCContainerScheme()
+    
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        return scrollView
+    }()
     
     lazy var containerView: UIView = {
         let view = UIView()
@@ -34,7 +34,7 @@ class LoginScreenViewController: BaseViewController, LoginScreenViewControllerPr
     
     lazy var logoLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "HelveticaNeue-Medium", size: 30)
+        label.font = UIConfig.titleTextFont
         label.text = "GB SHOP"
         return label
     }()
@@ -51,6 +51,8 @@ class LoginScreenViewController: BaseViewController, LoginScreenViewControllerPr
         textField.label.text = "Login"
         textField.placeholder = "1"
         textField.leadingAssistiveLabel.text = "Your username"
+        textField.isAccessibilityElement = true
+        textField.accessibilityIdentifier = "login"
         return textField
     }()
     
@@ -59,6 +61,8 @@ class LoginScreenViewController: BaseViewController, LoginScreenViewControllerPr
         textField.label.text = "Password"
         textField.placeholder = "1"
         textField.leadingAssistiveLabel.text = "Your password"
+        textField.isAccessibilityElement = true
+        textField.accessibilityIdentifier = "password"
         return textField
     }()
     
@@ -67,6 +71,8 @@ class LoginScreenViewController: BaseViewController, LoginScreenViewControllerPr
         button.applyOutlinedTheme(withScheme: containerScheme)
         button.setTitle("Login", for: .normal)
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        button.isAccessibilityElement = true
+        button.accessibilityIdentifier = "enter"
         return button
     }()
     
@@ -116,41 +122,41 @@ class LoginScreenViewController: BaseViewController, LoginScreenViewControllerPr
         containerView.addSubview(logoLabel)
         logoLabel.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().inset(logotypeOffset)
+            make.top.equalToSuperview().inset(UIConfig.logotypeOffset)
         }
         
         containerView.addSubview(logoImage)
         logoImage.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.top.equalTo(logoLabel.snp.bottom).offset(horizontalOffset)
-            make.width.height.equalTo(logotypeOffset * 2)
+            make.top.equalTo(logoLabel.snp.bottom).offset(UIConfig.horizontalOffset)
+            make.width.height.equalTo(UIConfig.logotypeOffset * 2)
         }
         
         containerView.addSubview(loginTextField)
         loginTextField.snp.makeConstraints { (make) in
             make.top.equalTo(logoImage.snp.bottom)
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
         }
         
         containerView.addSubview(passwordTextField)
         passwordTextField.snp.makeConstraints { (make) in
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
-            make.top.equalTo(loginTextField.snp.bottom).offset(verticalOffset / 2)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.top.equalTo(loginTextField.snp.bottom).offset(UIConfig.verticalOffset / 2)
         }
         
         containerView.addSubview(loginButton)
         loginButton.snp.makeConstraints { (make) in
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
-            make.height.equalTo(buttonHeight)
-            make.top.equalTo(passwordTextField.snp.bottom).offset(verticalOffset)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.height.equalTo(UIConfig.buttonHeight)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(UIConfig.verticalOffset)
         }
         
         containerView.addSubview(registrationButton)
         registrationButton.snp.makeConstraints { (make) in
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
-            make.height.equalTo(buttonHeight)
-            make.top.equalTo(loginButton.snp.bottom).offset(verticalOffset)
-            make.bottom.equalToSuperview().inset(verticalOffset)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.height.equalTo(UIConfig.buttonHeight)
+            make.top.equalTo(loginButton.snp.bottom).offset(UIConfig.verticalOffset)
+            make.bottom.equalToSuperview().inset(UIConfig.verticalOffset)
         }
     }
     

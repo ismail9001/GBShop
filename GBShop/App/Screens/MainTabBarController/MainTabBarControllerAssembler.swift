@@ -8,9 +8,8 @@
 import UIKit
 
 class MainTabBarControllerAssembler {
-    func assemble(user: User) -> MainTabBarViewController {
+    func assemble() -> MainTabBarViewController {
         let viewController = MainTabBarViewController()
-        viewController.user = user
 
         return viewController
     }

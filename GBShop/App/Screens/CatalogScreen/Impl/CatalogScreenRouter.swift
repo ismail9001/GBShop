@@ -6,19 +6,19 @@
 //
 
 protocol CatalogScreenRouterProtocol: AnyObject {
-    func openProductScreen(productId: Int)
+    func openProductScreen(product: ProductShortResult)
 }
 
 class CatalogScreenRouter: CatalogScreenRouterProtocol {
 
-    weak var viewController: CatalogScreenViewController!
+    weak var viewController: CatalogScreenViewController?
 
     init(viewController: CatalogScreenViewController) {
         self.viewController = viewController
     }
     
-    func openProductScreen(productId: Int) {
-        let viewController = ProductScreenAssembler().assemble(productId: productId)
-        self.viewController.show(viewController, sender: nil)
+    func openProductScreen(product: ProductShortResult) {
+        let viewController = ProductScreenAssembler().assemble(product: product)
+        self.viewController?.show(viewController, sender: nil)
     }
 }

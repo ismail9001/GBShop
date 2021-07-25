@@ -8,14 +8,20 @@
 import UIKit
 import SnapKit
 import SkeletonView
+import MaterialComponents.MaterialButtons_Theming
+import MaterialComponents.MaterialButtons
 
 protocol ProductScreenViewControllerProtocol: AnyObject {
+    func showAlert(value: String, title: String)
+    func showActivityIndicator()
+    func hideActivityIndicator()
 }
 
 class ProductScreenViewController: BaseViewController, ProductScreenViewControllerProtocol {
     
     var presenter: ProductScreenPresenterProtocol?
-    var productId: Int!
+    let containerScheme = MDCContainerScheme()
+    var product: ProductShortResult!
     let screenInset: CGFloat = 20
     let mainImageHeight: CGFloat = 250
     
@@ -27,7 +33,7 @@ class ProductScreenViewController: BaseViewController, ProductScreenViewControll
     
     lazy var productDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "HelveticaNeue-Light", size: 18)
+        label.font = UIConfig.mainTextFont
         label.text = ""
         label.numberOfLines = 0
         label.isSkeletonable = true
@@ -37,7 +43,7 @@ class ProductScreenViewController: BaseViewController, ProductScreenViewControll
     
     lazy var productPriceLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "HelveticaNeue-Medium", size: 30)
+        label.font = UIConfig.titleTextFont
         label.text = "Цена: 0 P"
         label.numberOfLines = 1
         label.isSkeletonable = true
@@ -48,7 +54,7 @@ class ProductScreenViewController: BaseViewController, ProductScreenViewControll
     lazy var showFeedbackButton: UIButton = {
         let button = UIButton()
         let label = UILabel()
-        label.font = UIFont(name: "HelveticaNeue-Light", size: 18)
+        label.font = UIConfig.mainTextFont
         label.text = "Отзывы"
         label.numberOfLines = 1
         button.addSubview(label)
@@ -57,7 +63,7 @@ class ProductScreenViewController: BaseViewController, ProductScreenViewControll
             make.centerY.equalToSuperview()
             make.width.height.equalTo(150)
         }
-        button.addTarget(self, action: #selector(feedbackButtonPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(feedbackButtonTapped), for: .touchUpInside)
         let bottomLineView = UIView()
         bottomLineView.backgroundColor = .gray
         button.addSubview(bottomLineView)
@@ -87,11 +93,18 @@ class ProductScreenViewController: BaseViewController, ProductScreenViewControll
         return button
     }()
     
+    lazy var addToBasketButton: MDCButton = {
+        let button = MDCButton()
+        button.applyOutlinedTheme(withScheme: containerScheme)
+        button.setTitle("Добавить в корзину", for: .normal)
+        button.addTarget(self, action: #selector(addToBaskedButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
-        presenter?.getProductById(productId: productId) { [self] product in
-            print(product)
+        presenter?.getProductById(productId: product.productId) { [self] product in
             title = product.productName
             productDescriptionLabel.text = "Описание: \(product.description)"
             productDescriptionLabel.hideSkeleton()
@@ -126,9 +139,21 @@ class ProductScreenViewController: BaseViewController, ProductScreenViewControll
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(50)
         }
+        
+        self.view.addSubview(addToBasketButton)
+        addToBasketButton.snp.makeConstraints { (make) in
+            make.top.equalTo(showFeedbackButton.snp.bottom).offset(UIConfig.verticalOffset)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.height.equalTo(UIConfig.buttonHeight)
+        }
     }
     
-    @objc func feedbackButtonPressed() {
+    @objc func feedbackButtonTapped() {
         presenter?.openFeedbackScreen()
+    }
+    
+    @objc func addToBaskedButtonTapped() {
+        showActivityIndicator()
+        presenter?.addToBasket(product: product)
     }
 }

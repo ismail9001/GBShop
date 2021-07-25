@@ -18,15 +18,10 @@ protocol ProfileScreenViewControllerProtocol: AnyObject {
 class ProfileScreenViewController: BaseViewController, ProfileScreenViewControllerProtocol {
 
     var presenter: ProfileScreenPresenterProtocol?
-    var user: User!
+    var user = UserDefaultsWrapper.userInfo()
     let containerScheme = MDCContainerScheme()
     
     let scrollView = UIScrollView()
-    
-    let logotypeOffset: CGFloat = 100.0
-    let buttonHeight: CGFloat = 60.0
-    let verticalOffset: CGFloat = 20.0
-    let horizontalOffset: CGFloat = 40.0
     
     lazy var containerView: UIView = {
         let view = UIView()
@@ -35,7 +30,7 @@ class ProfileScreenViewController: BaseViewController, ProfileScreenViewControll
     
     lazy var logoLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "HelveticaNeue-Medium", size: 30)
+        label.font = UIConfig.titleTextFont
         label.text = "GB SHOP"
         return label
     }()
@@ -74,7 +69,7 @@ class ProfileScreenViewController: BaseViewController, ProfileScreenViewControll
 
     lazy var genderLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "HelveticaNeue-Medium", size: 20)
+        label.font = UIConfig.mediumTextFont
         label.text = "Gender"
         return label
     }()
@@ -118,6 +113,7 @@ class ProfileScreenViewController: BaseViewController, ProfileScreenViewControll
     }
 
     func fillViews() {
+        guard let user = user else { return }
         loginTextField.text = user.login
         passwordTextField.text = user.password
         emailTextField.text = user.email
@@ -158,46 +154,46 @@ class ProfileScreenViewController: BaseViewController, ProfileScreenViewControll
         }
         logoLabel.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().inset(logotypeOffset)
+            make.top.equalToSuperview().inset(UIConfig.logotypeOffset / 2)
         }
         loginTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(logoLabel.snp.bottom).offset(horizontalOffset)
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
+            make.top.equalTo(logoLabel.snp.bottom).offset(UIConfig.horizontalOffset)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
         }
         passwordTextField.snp.makeConstraints { (make) in
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
-            make.top.equalTo(loginTextField.snp.bottom).offset(verticalOffset / 2)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.top.equalTo(loginTextField.snp.bottom).offset(UIConfig.verticalOffset / 2)
         }
         emailTextField.snp.makeConstraints { (make) in
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
-            make.top.equalTo(passwordTextField.snp.bottom).offset(verticalOffset / 2)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(UIConfig.verticalOffset / 2)
         }
         cardTextField.snp.makeConstraints { (make) in
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
-            make.top.equalTo(emailTextField.snp.bottom).offset(verticalOffset / 2)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.top.equalTo(emailTextField.snp.bottom).offset(UIConfig.verticalOffset / 2)
         }
         genderLabel.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview().inset(horizontalOffset)
-            make.top.equalTo(cardTextField.snp.bottom).offset(verticalOffset)
+            make.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.top.equalTo(cardTextField.snp.bottom).offset(UIConfig.verticalOffset)
         }
         gender.snp.makeConstraints { (make) in
-            make.trailing.equalToSuperview().inset(horizontalOffset)
+            make.trailing.equalToSuperview().inset(UIConfig.horizontalOffset)
             make.centerY.equalTo(genderLabel.snp.centerY)
         }
         bioTextField.snp.makeConstraints { (make) in
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
-            make.top.equalTo(gender.snp.bottom).offset(verticalOffset)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.top.equalTo(gender.snp.bottom).offset(UIConfig.verticalOffset)
         }
         saveButton.snp.makeConstraints { (make) in
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
-            make.height.equalTo(buttonHeight)
-            make.top.equalTo(bioTextField.snp.bottom).offset(verticalOffset)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.height.equalTo(UIConfig.buttonHeight)
+            make.top.equalTo(bioTextField.snp.bottom).offset(UIConfig.verticalOffset)
         }
         exitButton.snp.makeConstraints { (make) in
-            make.trailing.leading.equalToSuperview().inset(horizontalOffset)
-            make.height.equalTo(buttonHeight)
-            make.top.equalTo(saveButton.snp.bottom).offset(verticalOffset)
-            make.bottom.equalToSuperview().inset(verticalOffset)
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.height.equalTo(UIConfig.buttonHeight)
+            make.top.equalTo(saveButton.snp.bottom).offset(UIConfig.verticalOffset)
+            make.bottom.equalToSuperview().inset(UIConfig.verticalOffset)
         }
     }
 
