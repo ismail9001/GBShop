@@ -11,6 +11,8 @@ target 'GBShop' do
   pod 'MaterialComponents/Buttons+Theming'
   pod "SkeletonView"
   pod 'Kingfisher', '~> 6.0'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
   use_frameworks!
 
   # Pods for GBShop

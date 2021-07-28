@@ -5,7 +5,8 @@
 //  Created by macbook on 17.07.2021.
 //
 
-import  UIKit
+import UIKit
+import FirebaseAnalytics
 
 protocol ProductScreenPresenterProtocol: AnyObject {
     func addToBasket(product: ProductShortResult)
@@ -56,6 +57,11 @@ class ProductScreenPresenter: ProductScreenPresenterProtocol {
             user.basket?.append(product)
             let newNotificationRecieve = Notification.Name("newGoodRecieve")
             NotificationCenter.default.post(name: newNotificationRecieve, object: nil)
+            Analytics.logEvent(AnalyticsEventAddToCart, parameters: [
+                AnalyticsParameterItemID: "id-\(product.productId)",
+                AnalyticsParameterItemName: "\(product.productName)",
+              AnalyticsParameterContentType: "cont"
+            ])
         } else {
             user.basket = [product]
         }

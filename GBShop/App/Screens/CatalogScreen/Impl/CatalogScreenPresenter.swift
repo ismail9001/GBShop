@@ -5,7 +5,8 @@
 //  Created by macbook on 14.07.2021.
 //
 
-import  UIKit
+import UIKit
+import FirebaseAnalytics
 
 protocol CatalogScreenPresenterProtocol: AnyObject {
     func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping ([ProductShortResult]) -> Void)
@@ -33,6 +34,11 @@ class CatalogScreenPresenter: CatalogScreenPresenterProtocol {
     }
     
     func openProductScreen(product: ProductShortResult) {
+        Analytics.logEvent(AnalyticsEventViewItem, parameters: [
+            AnalyticsParameterItemID: "id-\(product.productId)",
+            AnalyticsParameterItemName: "\(product.productName)",
+          AnalyticsParameterContentType: "cont"
+        ])
         router?.openProductScreen(product: product)
     }
 }

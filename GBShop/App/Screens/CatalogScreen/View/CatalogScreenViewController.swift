@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 protocol CatalogScreenViewControllerProtocol: AnyObject {
     func showAlert(value: String, title: String)
@@ -29,6 +30,15 @@ class CatalogScreenViewController: BaseViewController,
         catalogCollectionView.dataSource = self
         self.title = "Каталог"
         updateCatalogCollection()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [
+            AnalyticsParameterItemID: "id-\(String(describing: UserDefaultsWrapper.userInfo()?.login))",
+            AnalyticsParameterItemName: "catalog",
+            AnalyticsParameterContentType: "cont"
+        ])
     }
     
     func updateCatalogCollection() {

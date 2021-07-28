@@ -10,6 +10,7 @@ import SnapKit
 import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MaterialComponents.MaterialButtons
 import MaterialComponents.MaterialButtons_Theming
+import FirebaseCrashlytics
 
 protocol LoginScreenViewControllerProtocol: AnyObject {
     func showAlert(value: String, title: String)
@@ -81,6 +82,14 @@ class LoginScreenViewController: BaseViewController, LoginScreenViewControllerPr
         button.applyTextTheme(withScheme: containerScheme)
         button.setTitle("Registration", for: .normal)
         button.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var crashButton: MDCButton = {
+        let button = MDCButton()
+        button.applyTextTheme(withScheme: containerScheme)
+        button.setTitle("Crash", for: .normal)
+        button.addTarget(self, action: #selector(crashButtonTapped), for: .touchUpInside)
         return button
     }()
 
@@ -156,6 +165,13 @@ class LoginScreenViewController: BaseViewController, LoginScreenViewControllerPr
             make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
             make.height.equalTo(UIConfig.buttonHeight)
             make.top.equalTo(loginButton.snp.bottom).offset(UIConfig.verticalOffset)
+        }
+        
+        containerView.addSubview(crashButton)
+        crashButton.snp.makeConstraints { (make) in
+            make.trailing.leading.equalToSuperview().inset(UIConfig.horizontalOffset)
+            make.height.equalTo(UIConfig.buttonHeight)
+            make.top.equalTo(registrationButton.snp.bottom).offset(UIConfig.verticalOffset)
             make.bottom.equalToSuperview().inset(UIConfig.verticalOffset)
         }
     }
@@ -171,6 +187,14 @@ class LoginScreenViewController: BaseViewController, LoginScreenViewControllerPr
     
     @objc func registerButtonTapped() {
         presenter?.openRegisterScreen()
+    }
+    
+    @objc func crashButtonTapped() {
+        guard let url = URL(string: "ttt") else {
+            Crashlytics.crashlytics().log("Test crash")
+            fatalError("test crash")
+        }
+        print(url)
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {
