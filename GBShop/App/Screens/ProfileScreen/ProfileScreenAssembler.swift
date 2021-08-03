@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileScreenAssembler {
-    func assemble(user: User) -> ProfileScreenViewController {
+    func assemble() -> ProfileScreenViewController {
         let storyboard = UIStoryboard(name: "ProfileScreen", bundle: Bundle.main)
         guard let viewController = storyboard.instantiateViewController(
                 withIdentifier: "ProfileScreenViewController") as?
@@ -18,7 +18,6 @@ class ProfileScreenAssembler {
         let interactor = ProfileScreenInteractor(presenter: presenter)
         let router = ProfileScreenRouter(viewController: viewController)
         viewController.presenter = presenter
-        viewController.user = user
         presenter.interactor = interactor
         presenter.router = router
 

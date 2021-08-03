@@ -54,7 +54,7 @@ class CatalogScreenViewController: BaseViewController,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.openProductScreen(productId: catalog[indexPath.row].productId)
+        presenter?.openProductScreen(product: catalog[indexPath.row])
     }
 }
 

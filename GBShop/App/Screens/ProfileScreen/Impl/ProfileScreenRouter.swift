@@ -13,7 +13,7 @@ protocol ProfileScreenRouterProtocol: AnyObject {
 
 class ProfileScreenRouter: ProfileScreenRouterProtocol {
     
-    weak var viewController: ProfileScreenViewController!
+    weak var viewController: ProfileScreenViewController?
     
     init(viewController: ProfileScreenViewController) {
         self.viewController = viewController

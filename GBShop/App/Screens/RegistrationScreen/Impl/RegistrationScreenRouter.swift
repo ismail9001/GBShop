@@ -8,8 +8,8 @@
 import UIKit
 
 protocol RegistrationScreenRouterProtocol: AnyObject {
-    func openProfileScreen(of user: User)
     func openLoginScreen()
+    func openCatalogScreen()
 }
 
 class RegistrationScreenRouter: RegistrationScreenRouterProtocol {
@@ -18,12 +18,12 @@ class RegistrationScreenRouter: RegistrationScreenRouterProtocol {
     init(viewController: RegistrationScreenViewController) {
         self.viewController = viewController
     }
-
-    func openProfileScreen(of user: User) {
-        DispatchQueue.main.async {
-            let viewController = ProfileScreenAssembler().assemble(user: user)
-            self.viewController.show(viewController, sender: nil)
-        }
+    
+    func openCatalogScreen() {
+        guard let window = UIApplication.shared.currentWindow else { return }
+        let viewController = MainTabBarControllerAssembler().assemble()
+        window.rootViewController = viewController
+        window.makeKeyAndVisible()
     }
 
     func openLoginScreen() {

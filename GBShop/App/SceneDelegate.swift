@@ -18,9 +18,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let navigator = UINavigationController()
         let viewController: UIViewController!
-        viewController = LoginScreenAssembler().assemble()
-        navigator.viewControllers = [viewController]
-        window.rootViewController = navigator
+        if UserDefaultsWrapper.userInfo() != nil {
+            viewController = MainTabBarControllerAssembler().assemble()
+            window.rootViewController = viewController
+        } else {
+            viewController = LoginScreenAssembler().assemble()
+            navigator.viewControllers = [viewController]
+            window.rootViewController = navigator
+        }
         window.makeKeyAndVisible()
         self.window = window
     }

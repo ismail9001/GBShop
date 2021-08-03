@@ -5,7 +5,7 @@
 //  Created by macbook on 22.06.2021.
 //
 
-struct User: Codable, Equatable {
+struct User: Codable {
     let userId: Int
     let login: String
     let password: String
@@ -15,6 +15,7 @@ struct User: Codable, Equatable {
     let gender: String
     let creditCard: String
     let bio: String
+    var basket: [ProductShortResult]?
     
     enum CodingKeys: String, CodingKey {
         case userId = "id_user"
@@ -26,5 +27,6 @@ struct User: Codable, Equatable {
         case gender = "gender"
         case creditCard = "creditCard"
         case bio = "bio"
+        case basket
     }
 }

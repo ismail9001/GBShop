@@ -10,7 +10,7 @@ protocol FeedbackScreenRouterProtocol: AnyObject {
 
 class FeedbackScreenRouter: FeedbackScreenRouterProtocol {
 
-    weak var viewController: FeedbackScreenViewController!
+    weak var viewController: FeedbackScreenViewController?
 
     init(viewController: FeedbackScreenViewController) {
         self.viewController = viewController

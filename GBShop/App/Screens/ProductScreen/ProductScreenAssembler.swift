@@ -8,7 +8,7 @@
 import UIKit
 
 class ProductScreenAssembler {
-    func assemble(productId: Int) -> ProductScreenViewController {
+    func assemble(product: ProductShortResult) -> ProductScreenViewController {
         let storyboard = UIStoryboard(name: "ProductScreen", bundle: Bundle.main)
         guard let viewController = storyboard.instantiateViewController(
                 withIdentifier: "ProductScreenViewController") as?
@@ -18,7 +18,7 @@ class ProductScreenAssembler {
         let interactor = ProductScreenInteractor(presenter: presenter)
         let router = ProductScreenRouter(viewController: viewController)
         viewController.presenter = presenter
-        viewController.productId = productId
+        viewController.product = product
         presenter.interactor = interactor
         presenter.router = router
 

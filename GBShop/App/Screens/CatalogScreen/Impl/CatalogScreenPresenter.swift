@@ -9,7 +9,7 @@ import  UIKit
 
 protocol CatalogScreenPresenterProtocol: AnyObject {
     func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping ([ProductShortResult]) -> Void)
-    func openProductScreen(productId: Int)
+    func openProductScreen(product: ProductShortResult)
 }
 
 class CatalogScreenPresenter: CatalogScreenPresenterProtocol {
@@ -32,7 +32,7 @@ class CatalogScreenPresenter: CatalogScreenPresenterProtocol {
         }
     }
     
-    func openProductScreen(productId: Int) {
-        router?.openProductScreen(productId: productId)
+    func openProductScreen(product: ProductShortResult) {
+        router?.openProductScreen(product: product)
     }
 }

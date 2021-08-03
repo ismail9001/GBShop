@@ -23,6 +23,15 @@
 		FA04C9B726A41233007DCCE3 /* FeedbackScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C9B626A41233007DCCE3 /* FeedbackScreenRouter.swift */; };
 		FA04C9BC26A41262007DCCE3 /* FeedbackScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C9BB26A41262007DCCE3 /* FeedbackScreenInteractor.swift */; };
 		FA04C9CA26A43679007DCCE3 /* MainTabBarControllerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C9C926A43679007DCCE3 /* MainTabBarControllerAssembler.swift */; };
+		FA04CB0C26AC40BD007DCCE3 /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB0B26AC40BD007DCCE3 /* UIConfig.swift */; };
+		FA04CB1226AC422C007DCCE3 /* BasketScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB1126AC422C007DCCE3 /* BasketScreenAssembler.swift */; };
+		FA04CB1826AC4271007DCCE3 /* BasketScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA04CB1726AC4271007DCCE3 /* BasketScreen.storyboard */; };
+		FA04CB1D26AC4292007DCCE3 /* BasketScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB1C26AC4292007DCCE3 /* BasketScreenViewController.swift */; };
+		FA04CB2326AC4325007DCCE3 /* BasketScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB2226AC4325007DCCE3 /* BasketScreenRouter.swift */; };
+		FA04CB2826AC435B007DCCE3 /* BasketScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB2726AC435B007DCCE3 /* BasketScreenInteractor.swift */; };
+		FA04CB2D26AC43AE007DCCE3 /* BasketScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB2C26AC43AE007DCCE3 /* BasketScreenPresenter.swift */; };
+		FA04CB3226AC5EC3007DCCE3 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB3126AC5EC3007DCCE3 /* UserDefaultsWrapper.swift */; };
+		FA04CB4326AC6D44007DCCE3 /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB4226AC6D43007DCCE3 /* BasketTableViewCell.swift */; };
 		FA09872A269F675B005925E7 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098729269F675B005925E7 /* MainTabBarViewController.swift */; };
 		FA098737269F78BE005925E7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098736269F78BE005925E7 /* UIApplicationExtension.swift */; };
 		FA09873D269F79E8005925E7 /* CatalogScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09873C269F79E8005925E7 /* CatalogScreenAssembler.swift */; };
@@ -98,7 +107,6 @@
 		FAE5AD042683BF5E00F070DC /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD032683BF5E00F070DC /* UserUpdate.swift */; };
 		FAE5AD1F268753F400F070DC /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */; };
 		FAE5AD2426875AFE00F070DC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD2326875AFE00F070DC /* Config.swift */; };
-		FAE5AD382687627700F070DC /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD372687627700F070DC /* ResultTests.swift */; };
 		FAE5AD5C2687AED500F070DC /* CatalogDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD5B2687AED500F070DC /* CatalogDataResult.swift */; };
 		FAE5AD642687AF2500F070DC /* ProductDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD632687AF2500F070DC /* ProductDetailResult.swift */; };
 		FAE5AD692687AFBD00F070DC /* CatalogRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5AD682687AFBD00F070DC /* CatalogRequestFactory.swift */; };
@@ -148,6 +156,15 @@
 		FA04C9B626A41233007DCCE3 /* FeedbackScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackScreenRouter.swift; sourceTree = "<group>"; };
 		FA04C9BB26A41262007DCCE3 /* FeedbackScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackScreenInteractor.swift; sourceTree = "<group>"; };
 		FA04C9C926A43679007DCCE3 /* MainTabBarControllerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerAssembler.swift; sourceTree = "<group>"; };
+		FA04CB0B26AC40BD007DCCE3 /* UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
+		FA04CB1126AC422C007DCCE3 /* BasketScreenAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreenAssembler.swift; sourceTree = "<group>"; };
+		FA04CB1726AC4271007DCCE3 /* BasketScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasketScreen.storyboard; sourceTree = "<group>"; };
+		FA04CB1C26AC4292007DCCE3 /* BasketScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreenViewController.swift; sourceTree = "<group>"; };
+		FA04CB2226AC4325007DCCE3 /* BasketScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreenRouter.swift; sourceTree = "<group>"; };
+		FA04CB2726AC435B007DCCE3 /* BasketScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreenInteractor.swift; sourceTree = "<group>"; };
+		FA04CB2C26AC43AE007DCCE3 /* BasketScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreenPresenter.swift; sourceTree = "<group>"; };
+		FA04CB3126AC5EC3007DCCE3 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		FA04CB4226AC6D43007DCCE3 /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
 		FA098729269F675B005925E7 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		FA098736269F78BE005925E7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		FA09873C269F79E8005925E7 /* CatalogScreenAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenAssembler.swift; sourceTree = "<group>"; };
@@ -232,7 +249,6 @@
 		FAE5AD032683BF5E00F070DC /* UserUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
 		FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		FAE5AD2326875AFE00F070DC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		FAE5AD372687627700F070DC /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		FAE5AD5B2687AED500F070DC /* CatalogDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataResult.swift; sourceTree = "<group>"; };
 		FAE5AD632687AF2500F070DC /* ProductDetailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailResult.swift; sourceTree = "<group>"; };
 		FAE5AD682687AFBD00F070DC /* CatalogRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRequestFactory.swift; sourceTree = "<group>"; };
@@ -360,6 +376,36 @@
 			path = MainTabBarController;
 			sourceTree = "<group>";
 		};
+		FA04CB1026AC420B007DCCE3 /* BasketScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA04CB2126AC430F007DCCE3 /* Impl */,
+				FA04CB1626AC4261007DCCE3 /* View */,
+				FA04CB1126AC422C007DCCE3 /* BasketScreenAssembler.swift */,
+			);
+			path = BasketScreen;
+			sourceTree = "<group>";
+		};
+		FA04CB1626AC4261007DCCE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA04CB1726AC4271007DCCE3 /* BasketScreen.storyboard */,
+				FA04CB1C26AC4292007DCCE3 /* BasketScreenViewController.swift */,
+				FA04CB4226AC6D43007DCCE3 /* BasketTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA04CB2126AC430F007DCCE3 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				FA04CB2226AC4325007DCCE3 /* BasketScreenRouter.swift */,
+				FA04CB2726AC435B007DCCE3 /* BasketScreenInteractor.swift */,
+				FA04CB2C26AC43AE007DCCE3 /* BasketScreenPresenter.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
 		FA09873B269F79BE005925E7 /* CatalogScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +513,7 @@
 		FA454231269B60C900FF2A5F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FA04CB1026AC420B007DCCE3 /* BasketScreen */,
 				FA04C9C826A4364C007DCCE3 /* MainTabBarController */,
 				FA04C99626A4105E007DCCE3 /* FeedbackScreen */,
 				FA04C95326A33FEF007DCCE3 /* ProductScreen */,
@@ -633,7 +680,6 @@
 		FAE5AC52267F887100F070DC /* GBShopTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAE5AD2826875F5800F070DC /* Entity */,
 				FAE5AC55267F887200F070DC /* Info.plist */,
 				FAE5AD1E268753F400F070DC /* ResponseCodableTests.swift */,
 			);
@@ -720,6 +766,8 @@
 			children = (
 				FAE5AC4A267F887100F070DC /* Info.plist */,
 				FAE5AD2326875AFE00F070DC /* Config.swift */,
+				FA04CB0B26AC40BD007DCCE3 /* UIConfig.swift */,
+				FA04CB3126AC5EC3007DCCE3 /* UserDefaultsWrapper.swift */,
 			);
 			path = Environments;
 			sourceTree = "<group>";
@@ -770,14 +818,6 @@
 				FAE5AD032683BF5E00F070DC /* UserUpdate.swift */,
 			);
 			path = User;
-			sourceTree = "<group>";
-		};
-		FAE5AD2826875F5800F070DC /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				FAE5AD372687627700F070DC /* ResultTests.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		FAE5AD5A2687AEAB00F070DC /* Catalog */ = {
@@ -915,6 +955,7 @@
 				FA04C9A926A4113F007DCCE3 /* FeedbackScreen.storyboard in Resources */,
 				FA4542AC269B869A00FF2A5F /* ProfileScreen.storyboard in Resources */,
 				FA454270269B74A400FF2A5F /* RegistrationScreen.storyboard in Resources */,
+				FA04CB1826AC4271007DCCE3 /* BasketScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1050,7 +1091,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n";
+			shellScript = "        if which swiftlint >/dev/null; then\n          swiftlint\n        else\n          echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n          exit 1\n        fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1067,11 +1108,13 @@
 				FA04C96C26A340D0007DCCE3 /* ProductScreenPresenter.swift in Sources */,
 				FA45424B269B622500FF2A5F /* LoginScreenInteractor.swift in Sources */,
 				FAE5AD042683BF5E00F070DC /* UserUpdate.swift in Sources */,
+				FA04CB1D26AC4292007DCCE3 /* BasketScreenViewController.swift in Sources */,
 				FA454285269B762E00FF2A5F /* RegistrationScreenRouter.swift in Sources */,
 				FAABE43F2691FC6500D16CA1 /* GetFeedbacksRequestFactory.swift in Sources */,
 				FAE5ACDE2683B13A00F070DC /* Logout.swift in Sources */,
 				FA04C9AF26A41197007DCCE3 /* FeedbackScreenPresenter.swift in Sources */,
 				FA4542BF269B87CF00FF2A5F /* ProfileScreenInteractor.swift in Sources */,
+				FA04CB1226AC422C007DCCE3 /* BasketScreenAssembler.swift in Sources */,
 				FA45427B269B756400FF2A5F /* RegistrationScreenInteractor.swift in Sources */,
 				FAE5AD892687B86B00F070DC /* ProductInfo.swift in Sources */,
 				FAE5AD8F2687BC8D00F070DC /* ProductShortResult.swift in Sources */,
@@ -1092,6 +1135,7 @@
 				FA4542A3269B864D00FF2A5F /* ProfileScreenAssembler.swift in Sources */,
 				FAABE4352691F9F200D16CA1 /* DeleteFeedbackInfo.swift in Sources */,
 				FA098737269F78BE005925E7 /* UIApplicationExtension.swift in Sources */,
+				FA04CB2326AC4325007DCCE3 /* BasketScreenRouter.swift in Sources */,
 				FAABE42D2691F90600D16CA1 /* AddFeedbackResult.swift in Sources */,
 				FA04C9CA26A43679007DCCE3 /* MainTabBarControllerAssembler.swift in Sources */,
 				FAABE4442691FCC700D16CA1 /* GetFeedbacksInfo.swift in Sources */,
@@ -1109,6 +1153,7 @@
 				FA4541A62699894000FF2A5F /* AddToBasketResult.swift in Sources */,
 				FA09875C269F7C2A005925E7 /* CatalogScreenRouter.swift in Sources */,
 				FA4542C4269B884800FF2A5F /* ProfileScreenRouter.swift in Sources */,
+				FA04CB2D26AC43AE007DCCE3 /* BasketScreenPresenter.swift in Sources */,
 				FAE5AC81268278DB00F070DC /* LoginResult.swift in Sources */,
 				FAE5ACBC26827D1800F070DC /* DataRequest.swift in Sources */,
 				FAABE3F72691F48A00D16CA1 /* AddFeedbackRequestFactory.swift in Sources */,
@@ -1136,7 +1181,11 @@
 				FA454275269B74C000FF2A5F /* RegistrationScreenViewController.swift in Sources */,
 				FAE5ACFA2683BEF800F070DC /* UserUpdateResult.swift in Sources */,
 				FAE5AD7B2687B6F100F070DC /* ProductRequestFactory.swift in Sources */,
+				FA04CB2826AC435B007DCCE3 /* BasketScreenInteractor.swift in Sources */,
+				FA04CB4326AC6D44007DCCE3 /* BasketTableViewCell.swift in Sources */,
+				FA04CB0C26AC40BD007DCCE3 /* UIConfig.swift in Sources */,
 				FAE5ACFF2683BF2A00F070DC /* UserUpdateRequestFactory.swift in Sources */,
+				FA04CB3226AC5EC3007DCCE3 /* UserDefaultsWrapper.swift in Sources */,
 				FA45419B269987C800FF2A5F /* AddToBasketRequestFactory.swift in Sources */,
 				FA4541C4269991A900FF2A5F /* PayBasketRequestFactory.swift in Sources */,
 				FAE5AD692687AFBD00F070DC /* CatalogRequestFactory.swift in Sources */,
@@ -1151,7 +1200,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAE5AD382687627700F070DC /* ResultTests.swift in Sources */,
 				FAE5AD1F268753F400F070DC /* ResponseCodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

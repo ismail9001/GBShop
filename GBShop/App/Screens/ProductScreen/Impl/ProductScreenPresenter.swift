@@ -8,6 +8,7 @@
 import  UIKit
 
 protocol ProductScreenPresenterProtocol: AnyObject {
+    func addToBasket(product: ProductShortResult)
     func getProductById(productId: Int, completion: @escaping (ProductDetailResult) -> Void)
     func openFeedbackScreen()
 }
@@ -32,5 +33,33 @@ class ProductScreenPresenter: ProductScreenPresenterProtocol {
     
     func openFeedbackScreen() {
         router?.openFeedBackScreen()
+    }
+    
+    func addToBasket(product: ProductShortResult) {
+        interactor?.addToBasket(productId: product.productId) { result in
+            let title = result ? "Успешно" : "Ошибка"
+            let value = result ? "товар добавлен в корзину" : "товар не удалось поместить в корзину"
+            DispatchQueue.main.async {
+                self.view?.hideActivityIndicator()
+                self.view?.showAlert(value: value, title: title)
+            }
+            if result {
+                self.addToUserBasket(product: product)
+            }
+        }
+    }
+    
+    func addToUserBasket(product: ProductShortResult) {
+        guard let savedUser = UserDefaultsWrapper.userInfo() else { return }
+        var user = savedUser
+        if user.basket != nil {
+            user.basket?.append(product)
+            let newNotificationRecieve = Notification.Name("newGoodRecieve")
+            NotificationCenter.default.post(name: newNotificationRecieve, object: nil)
+        } else {
+            user.basket = [product]
+        }
+        
+        UserDefaultsWrapper.saveUserInfo(user: user)
     }
 }
