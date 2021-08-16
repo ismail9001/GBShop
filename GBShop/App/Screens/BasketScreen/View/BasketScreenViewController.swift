@@ -10,6 +10,7 @@ import MaterialComponents.MaterialButtons_Theming
 import MaterialComponents.MaterialButtons
 import SnapKit
 import Kingfisher
+import FirebaseAnalytics
 
 protocol BasketScreenViewControllerProtocol: AnyObject {
     func clearBasket()
@@ -241,6 +242,12 @@ class BasketScreenViewController: BaseViewController,
         var user = savedUser
         user.basket = user.basket?.filter { $0.productName != productName }
         UserDefaultsWrapper.saveUserInfo(user: user)
+        
+        Analytics.logEvent(AnalyticsEventRemoveFromCart, parameters: [
+            AnalyticsParameterItemName: "\(productName)",
+            AnalyticsParameterContentType: "cont"
+        ])
+        
         calculateViews()
     }
     

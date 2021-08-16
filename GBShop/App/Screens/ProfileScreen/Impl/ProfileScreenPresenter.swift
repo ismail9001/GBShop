@@ -5,7 +5,8 @@
 //  Created by macbook on 11.07.2021.
 //
 
-import  UIKit
+import UIKit
+import FirebaseAnalytics
 
 protocol ProfileScreenPresenterProtocol: AnyObject {
     func updateUser(updatedUser: UserData)
@@ -54,6 +55,11 @@ class ProfileScreenPresenter: ProfileScreenPresenterProtocol {
     }
     
     func openLoginScreen() {
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: "id-\(String(describing: UserDefaultsWrapper.userInfo()?.login))",
+            AnalyticsParameterItemName: "exit",
+            AnalyticsParameterContentType: "cont"
+        ])
         UserDefaultsWrapper.deleteUserData()
         router?.openLoginScreen()
     }

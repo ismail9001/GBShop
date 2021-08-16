@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if CommandLine.arguments.contains("--uitesting") {
             UserDefaultsWrapper.deleteUserData()
         }
+        FirebaseApp.configure()
         return true
     }
     

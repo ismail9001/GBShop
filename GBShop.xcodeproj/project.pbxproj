@@ -32,6 +32,7 @@
 		FA04CB2D26AC43AE007DCCE3 /* BasketScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB2C26AC43AE007DCCE3 /* BasketScreenPresenter.swift */; };
 		FA04CB3226AC5EC3007DCCE3 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB3126AC5EC3007DCCE3 /* UserDefaultsWrapper.swift */; };
 		FA04CB4326AC6D44007DCCE3 /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04CB4226AC6D43007DCCE3 /* BasketTableViewCell.swift */; };
+		FA04CBAE26B1D84D007DCCE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA04CBAD26B1D84D007DCCE3 /* GoogleService-Info.plist */; };
 		FA09872A269F675B005925E7 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098729269F675B005925E7 /* MainTabBarViewController.swift */; };
 		FA098737269F78BE005925E7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA098736269F78BE005925E7 /* UIApplicationExtension.swift */; };
 		FA09873D269F79E8005925E7 /* CatalogScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09873C269F79E8005925E7 /* CatalogScreenAssembler.swift */; };
@@ -165,6 +166,7 @@
 		FA04CB2C26AC43AE007DCCE3 /* BasketScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketScreenPresenter.swift; sourceTree = "<group>"; };
 		FA04CB3126AC5EC3007DCCE3 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		FA04CB4226AC6D43007DCCE3 /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
+		FA04CBAD26B1D84D007DCCE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA098729269F675B005925E7 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		FA098736269F78BE005925E7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		FA09873C269F79E8005925E7 /* CatalogScreenAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenAssembler.swift; sourceTree = "<group>"; };
@@ -766,6 +768,7 @@
 			children = (
 				FAE5AC4A267F887100F070DC /* Info.plist */,
 				FAE5AD2326875AFE00F070DC /* Config.swift */,
+				FA04CBAD26B1D84D007DCCE3 /* GoogleService-Info.plist */,
 				FA04CB0B26AC40BD007DCCE3 /* UIConfig.swift */,
 				FA04CB3126AC5EC3007DCCE3 /* UserDefaultsWrapper.swift */,
 			);
@@ -954,6 +957,7 @@
 				FA45423D269B616D00FF2A5F /* LoginScreen.storyboard in Resources */,
 				FA04C9A926A4113F007DCCE3 /* FeedbackScreen.storyboard in Resources */,
 				FA4542AC269B869A00FF2A5F /* ProfileScreen.storyboard in Resources */,
+				FA04CBAE26B1D84D007DCCE3 /* GoogleService-Info.plist in Resources */,
 				FA454270269B74A400FF2A5F /* RegistrationScreen.storyboard in Resources */,
 				FA04CB1826AC4271007DCCE3 /* BasketScreen.storyboard in Resources */,
 			);
@@ -1084,6 +1088,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
 			);
 			outputFileListPaths = (
 			);
@@ -1091,7 +1096,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "        if which swiftlint >/dev/null; then\n          swiftlint\n        else\n          echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n          exit 1\n        fi\n";
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\n    fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1362,6 +1367,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7CP7J55BQL;
 				INFOPLIST_FILE = GBShop/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

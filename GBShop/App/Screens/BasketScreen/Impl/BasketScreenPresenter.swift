@@ -5,7 +5,8 @@
 //  Created by macbook on 24.07.2021.
 //
 
-import  UIKit
+import UIKit
+import FirebaseAnalytics
 
 protocol BasketScreenPresenterProtocol: AnyObject {
     func payBasket(basketId: Int)
@@ -26,6 +27,10 @@ class BasketScreenPresenter: BasketScreenPresenterProtocol {
             DispatchQueue.main.async { [self] in
                 view?.hideActivityIndicator()
                 if result {
+                    Analytics.logEvent(AnalyticsEventPurchase, parameters: [
+                        AnalyticsParameterItemName: "cartId - \(basketId)",
+                        AnalyticsParameterContentType: "cont"
+                    ])
                     view?.showAlert(value: "Оплата произведена успешно", title: "Спасибо за покупку")
                     view?.clearBasket()
                 } else {

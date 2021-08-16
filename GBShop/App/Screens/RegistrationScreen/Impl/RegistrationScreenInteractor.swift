@@ -5,6 +5,8 @@
 //  Created by macbook on 11.07.2021.
 //
 
+import FirebaseAnalytics
+
 protocol RegistrationScreenInteractorProtocol: AnyObject {
     func register(newUser: UserData)
 }
@@ -30,6 +32,11 @@ class RegistrationScreenInteractor: RegistrationScreenInteractorProtocol {
                               bio: newUser.bio) { response in
             switch response.result {
             case .success(let result):
+                Analytics.logEvent(AnalyticsEventSignUp, parameters: [
+                    AnalyticsParameterItemID: "id-\(123)",
+                    AnalyticsParameterItemName: newUser.username,
+                    AnalyticsParameterContentType: "cont"
+                ])
                 self.presenter?.checkServerResult(with: result)
             case .failure(let error):
                 print(String(describing: error))
